@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-import styled from 'styled-components'
+import styled, { Interpolation, css } from 'styled-components'
 
 export interface ViewType {
   children: React.ReactNode
@@ -23,11 +24,8 @@ export interface ViewType {
   m: number
 
   // sizes
-  // h: DimensionValue | undefined
-  // w: DimensionValue | undefined
-
-  // shadow
-	// s: ShadowsType
+  h: number
+  w: number
 
   // border radius
   br: number
@@ -47,14 +45,8 @@ export interface ViewType {
   // border width
   bw: number
 
-  // bordercolor
-  // bc: keyof ColorType
-
   // circle
   round: number
-
-  // background color
-  // bgc: keyof ColorType
 
   // flex
   flex: number
@@ -68,10 +60,7 @@ export interface ViewType {
   // overflow
   overflow: 'hidden' | 'visible' | 'scroll'
   overflowHidden: boolean
-
-  // pointer events
-  pointerEvents?: 'auto' | 'none' | 'box-none' | 'box-only' | undefined
-
+  
   // position
   position: 'absolute' | 'relative'
   absolute: boolean
@@ -79,62 +68,66 @@ export interface ViewType {
   rx: number // right x
   y: number
   by: number // bottom y
+
+  style: Interpolation<React.CSSProperties>
 }
 
-const StyledView = styled.div<ViewType>`
-  /* Common styles */
-  box-sizing: border-box;
-  position: ${({ absolute }) => (absolute ? 'absolute' : 'static')};
+const StyledView = styled.div<Partial<ViewType>>`
   display: flex;
-  flex: ${({ flex }) => flex || 'initial'};
-  flex-direction: ${({ row }) => (row ? 'row' : 'column')};
-  align-items: ${({ cross }) => cross || 'stretch'};
-  justify-content: ${({ main }) => main || 'flex-start'};
-  pointer-events: ${({ pointerEvents }) => pointerEvents || 'auto'};
-  overflow: ${({ overflow }) => overflow || 'visible'};
-  overflow: ${({ overflowHidden }) => overflowHidden && 'hidden'};
+  flex-direction: column;
 
-  /* Padding */
-  padding: ${({ p }) => p || 0};
-  padding-top: ${({ pt }) => pt || 0};
-  padding-left: ${({ pl }) => pl || 0};
-  padding-right: ${({ pr }) => pr || 0};
-  padding-bottom: ${({ pb }) => pb || 0};
-  padding-vertical: ${({ pv }) => pv || 0};
-  padding-horizontal: ${({ ph }) => ph || 0};
+  ${({ p }) => p && `padding: ${p}px;`};
+  ${({ ph }) => ph && `padding-left: ${ph}px; padding-right: ${ph}px;`};
+  ${({ pv }) => pv && `padding-top: ${pv}px; padding-bottom: ${pv}px;`};
+  ${({ pl }) => pl && `padding-left: ${pl}px;`};
+  ${({ pr }) => pr && `padding-right: ${pr}px;`};
+  ${({ pt }) => pt && `padding-top: ${pt}px;`};
 
-  /* Margin */
-  margin: ${({ m }) => m || 0};
-  margin-top: ${({ mt }) => mt || 0};
-  margin-left: ${({ ml }) => ml || 0};
-  margin-right: ${({ mr }) => mr || 0};
-  margin-bottom: ${({ mb }) => mb || 0};
-  margin-vertical: ${({ mv }) => mv || 0};
-  margin-horizontal: ${({ mh }) => mh || 0};
+  ${({ m }) => m && `margin: ${m}px;`};
+  ${({ mh }) => mh && `margin-left: ${mh}px; margin-right: ${mh}px;`};
+  ${({ mv }) => mv && `margin-top: ${mv}px; margin-bottom: ${mv}px;`};
+  ${({ ml }) => ml && `margin-left: ${ml}px;`};
+  ${({ mr }) => mr && `margin-right: ${mr}px;`};
+  ${({ mt }) => mt && `margin-top: ${mt}px;`};
+  ${({ mb }) => mb && `margin-bottom: ${mb}px;`};
 
-  /* Size and Border */
+  ${({ h }) => h && `height: ${h}px;`};
+  ${({ w }) => w && `width: ${w}px;`};
 
-  border-width: ${({ bw }) => bw || 0};
-  border-radius: ${({ br }) => br || 0}px;
-  border-top-left-radius: ${({ btlr }) => btlr || 0}px;
-  border-top-right-radius: ${({ btrr }) => btrr || 0}px;
-  border-bottom-left-radius: ${({ bblr }) => bblr || 0}px;
-  border-bottom-right-radius: ${({ bbrr }) => bbrr || 0}px;
+  ${({ br }) => br && `border-radius: ${br}px;`};
+  ${({ btlr }) => btlr && `border-top-left-radius: ${btlr}px;`};
+  ${({ btrr }) => btrr && `border-top-right-radius: ${btrr}px;`};
+  ${({ bblr }) => bblr && `border-bottom-left-radius: ${bblr}px;`};
+  ${({ bbrr }) => bbrr && `border-bottom-right-radius: ${bbrr}px;`};
 
-  /* Positioning */
-  left: ${({ x, absolute }) => (absolute ? x || 0 : 'auto')};
-  right: ${({ rx, absolute }) => (absolute ? rx || 0 : 'auto')};
-  top: ${({ y, absolute }) => (absolute ? y || 0 : 'auto')};
-  bottom: ${({ by, absolute }) => (absolute ? by || 0 : 'auto')};
+  ${({ bw }) => bw && `border-width: ${bw}px;`};
 
-  /* Additional Styles */
-  ${({ flex1, flex }) => flex1 && !flex && 'flex: 1;'}
+  ${({ round }) => round && `height: ${round}px; width: ${round}px; border-radius: ${round / 2}px;`};
 
-  /* Round */
-  ${({ round }) => round && `border-radius: ${round / 2}px;`}
+  ${({ flex }) => flex && `flex: ${flex};`};
+  ${({ flex1 }) => flex1 && `flex: 1;`};
+
+  ${({ row }) => row && `flex-direction: row;`};
+
+  ${({ main }) => main && `justify-content: ${main};`};
+  ${({ cross }) => cross && `align-items: ${cross};`};
+
+  ${({ overflow }) => overflow && `overflow: ${overflow};`};
+  ${({ overflowHidden }) => overflowHidden && `overflow: hidden;`};
+
+  ${({ position }) => position && `position: ${position};`};
+  ${({ absolute }) => absolute && `position: absolute;`};
+  ${({ absolute, x }) => absolute && x && `left: ${x}px;`};
+  ${({ absolute, rx }) => absolute && rx && `right: ${rx}px;`};
+  ${({ absolute, y }) => absolute && y && `top: ${y}px;`};
+  ${({ absolute, by }) => absolute && by && `bottom: ${by}px;`};
+
+  ${props => props.style}
+
+  border: 1px solid red;
 `
 
-export const View: React.FC<ViewType> = ({
+export const View: React.FC<Partial<ViewType>> = ({
   children,
   // paddings
   ph,
@@ -153,28 +146,18 @@ export const View: React.FC<ViewType> = ({
   mb,
   m,
   // sizes
-  // h,
-  // w,
-  // shadow
-  // s,
+  h,
+  w,
   // border radius
   br,
-  // border top left radius
   btlr,
-  // border top right radius
   btrr,
-  // border bottom left radius
   bblr,
-  // border bottom right radius
   bbrr,
   // border width
   bw,
-  // border color
-  // bc,
   // circle
   round,
-  // background color
-  // bgc,
   // flex
   flex,
   flex1,
@@ -185,8 +168,6 @@ export const View: React.FC<ViewType> = ({
   // overflow
   overflow,
   overflowHidden,
-  // pointer events
-  pointerEvents,
   // position
   position,
   absolute,
@@ -194,8 +175,7 @@ export const View: React.FC<ViewType> = ({
   rx,
   y,
   by,
-  // style,
-  // onLayout,
+  style,
 }) => (
   <StyledView
     ph={ph}
@@ -205,6 +185,7 @@ export const View: React.FC<ViewType> = ({
     pt={pt}
     pb={pb}
     p={p}
+    // margins
     mh={mh}
     mv={mv}
     ml={ml}
@@ -212,34 +193,37 @@ export const View: React.FC<ViewType> = ({
     mt={mt}
     mb={mb}
     m={m}
-    // h={h}
-    // w={w}
-    // s={s}
+    // sizes
+    h={h}
+    w={w}
+    // border radius
     br={br}
     btlr={btlr}
     btrr={btrr}
     bblr={bblr}
     bbrr={bbrr}
+    // border width
     bw={bw}
-    // bc={bc}
+    // circle
     round={round}
-    // bgc={bgc}
+    // flex
     flex={flex}
-    flex1={flex1}
+    flex1={!!flex1 && !flex}
+    // flexbox
     row={row}
     main={main}
     cross={cross}
+    // overflow
     overflow={overflow}
     overflowHidden={overflowHidden}
-    pointerEvents={pointerEvents}
+    // position
     position={position}
     absolute={absolute}
     x={x}
     rx={rx}
     y={y}
     by={by}
-    // style={style}
-    // onLayout={onLayout}
+    style={style}
   >
     {children}
   </StyledView>
