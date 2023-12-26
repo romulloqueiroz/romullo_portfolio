@@ -53,6 +53,4 @@ export const StyledView = styled.div<Partial<ViewType>>`
   ${({ absolute, by }) => absolute && by && `bottom: ${typeof by === 'number' ? `${by}px` : by};`};
 
   ${props => props.style};
-
-  border: 2px solid red;
 `
