@@ -6,13 +6,13 @@ export default function Home() {
     <main>
       <View 
         w='100vw'
+        h='100vh'
         main='center'
         cross='center'
         style={{
           border: '4px solid green'
         }}
-        as='section'
-        mt={50}
+        as='main'
       >
         <h1 className={styles.title}>SOMETHING</h1>
       </View>

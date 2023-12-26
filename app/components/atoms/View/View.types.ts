@@ -98,5 +98,5 @@ export interface ViewType {
 
   style: Interpolation<CSSProperties>
 
-  as?: keyof JSX.IntrinsicElements
+  as?: 'div' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'header' | 'footer'
 }
