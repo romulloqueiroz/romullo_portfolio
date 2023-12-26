@@ -51,54 +51,56 @@ export const View: React.FC<Partial<ViewType>> = ({
   y,
   by,
   style,
+  as,
 }) => (
   <StyledView
-    ph={ph}
-    pv={pv}
-    pl={pl}
-    pr={pr}
-    pt={pt}
-    pb={pb}
-    p={p}
+    $ph={ph}
+    $pv={pv}
+    $pl={pl}
+    $pr={pr}
+    $pt={pt}
+    $pb={pb}
+    $p={p}
     // margins
-    mh={mh}
-    mv={mv}
-    ml={ml}
-    mr={mr}
-    mt={mt}
-    mb={mb}
-    m={m}
+    $mh={mh}
+    $mv={mv}
+    $ml={ml}
+    $mr={mr}
+    $mt={mt}
+    $mb={mb}
+    $m={m}
     // sizes
-    h={h}
-    w={w}
+    $h={h}
+    $w={w}
     // border radius
-    br={br}
-    btlr={btlr}
-    btrr={btrr}
-    bblr={bblr}
-    bbrr={bbrr}
+    $br={br}
+    $btlr={btlr}
+    $btrr={btrr}
+    $bblr={bblr}
+    $bbrr={bbrr}
     // border width
-    bw={bw}
+    $bw={bw}
     // circle
-    round={round}
+    $round={round}
     // flex
-    flex={flex}
-    flex1={!!flex1 && !flex}
+    $flex={flex}
+    $flex1={!!flex1 && !flex}
     // flexbox
-    row={row}
-    main={main}
-    cross={cross}
+    $row={row}
+    $main={main}
+    $cross={cross}
     // overflow
-    overflow={overflow}
-    overflowHidden={overflowHidden}
+    $overflow={overflow}
+    $overflowHidden={overflowHidden}
     // position
-    position={position}
-    absolute={absolute}
-    x={x}
-    rx={rx}
-    y={y}
-    by={by}
+    $position={position}
+    $absolute={absolute}
+    $x={x}
+    $rx={rx}
+    $y={y}
+    $by={by}
     style={style}
+    as={as}
   >
     {children}
   </StyledView>
