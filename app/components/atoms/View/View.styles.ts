@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { ViewType } from './View.types'
 
-// export const StyledView = styled.div<Partial<ViewType>>`
 export const StyledView = styled.div.attrs<Partial<ViewType>>(({ as }) => ({ as: as || 'div' }))`
   display: flex;
   flex-direction: column; // Only to simulate the React Native workflow
