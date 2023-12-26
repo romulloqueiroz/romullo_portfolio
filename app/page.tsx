@@ -3,12 +3,11 @@ import { View } from '@atoms'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <View 
-        h={300} 
-        w={1300}
+        w='100vw'
         main='center'
-        ph={200}
+        cross='center'
       >
         <h1 className={styles.title}>SOMETHING</h1>
       </View>
