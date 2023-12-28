@@ -5,7 +5,7 @@ import { useMotionValue, useSpring } from 'framer-motion'
 import { useEffect } from 'react'
 import { Testando } from './Testando'
 
-export const Floating = () => {
+export const Home3D = () => {
 
   const mouse = {
     x: useMotionValue(0),
@@ -37,5 +37,3 @@ export const Floating = () => {
     </>
   )
 }
-
-

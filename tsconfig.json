@@ -30,8 +30,9 @@
       "@styles": ["app/styles/index"],
       "@utils": ["app/utils/index"],
       "@hooks": ["app/hooks/index"],
+      "@3D": ["app/3D/index"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/atoms/Floating/Model.js", "app/components/atoms/Floating/Testing.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/3D/Home/Model.js", "app/components/atoapp/3D/Home/Testing.js
   "exclude": ["node_modules"]
 }

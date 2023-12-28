@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, Floating } from '@atoms'
+import { View, Text } from '@atoms'
+import { Home3D } from '@3D'
 
 const backgroundUrl = 'https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg'
 
@@ -9,10 +10,7 @@ const Overlay = () => (
     w='100vw'
     h='100vh'
     cross='center'
-    style={{
-      // background: 'rgba(0,0,0,0.4)',
-      backdropFilter: 'blur(1.4px)',
-    }}
+    style={{ backdropFilter: 'blur(1.2px)' }}
   >
     <View 
       cross='center'
@@ -21,10 +19,7 @@ const Overlay = () => (
       x='50%'
       y='20%'
       w='92%'
-      style={{
-        transform: 'translate(-50%, -50%)',
-        // border: '2px solid black',
-      }}
+      style={{ transform: 'translate(-50%, -50%)' }}
     >
       <Text as='h1'>
         HELLO, I'M ROMULLO
@@ -36,20 +31,18 @@ const Overlay = () => (
   </View>
 )
 
-export const Home = () => {
-  return (
-    <View 
-      w='100vw'
-      h='100vh'
-      main='center'
-      cross='center'
-      as='main'
-      style={{
-        background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
-      }}
-    >
-      <Floating />
-      <Overlay />
-    </View>
-  )
-}
+export const Home = () => (
+  <View 
+    w='100vw'
+    h='100vh'
+    main='center'
+    cross='center'
+    as='main'
+    style={{
+      background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
+    }}
+  >
+    <Home3D />
+    <Overlay />
+  </View>
+)
