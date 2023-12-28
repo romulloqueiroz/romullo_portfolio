@@ -25,5 +25,5 @@ export interface TextType {
 
   style: CSSProperties
 
-  as?: 'p' | 'h1' | 'h2' | 'h3'
+  as?: 'p' | 'h1' | 'h2' | 'h3' | 'span'
 }

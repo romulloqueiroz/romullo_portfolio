@@ -45,7 +45,7 @@ export const Home = () => {
       cross='center'
       as='main'
       style={{
-        background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(${backgroundUrl})`,
+        background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
       }}
     >
       <Floating />
