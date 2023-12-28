@@ -14,6 +14,8 @@ const Text = forwardRef<HTMLParagraphElement, Partial<TextType>>(({
   mt,
   style,
   as,
+  onMouseEnter,
+  onMouseLeave,
 }, ref) => (
   <StyledView
     $weight={weight}
@@ -27,6 +29,8 @@ const Text = forwardRef<HTMLParagraphElement, Partial<TextType>>(({
     style={style}
     as={as}
     ref={ref}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
     {children}
   </StyledView>
