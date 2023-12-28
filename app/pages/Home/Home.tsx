@@ -9,18 +9,32 @@ const Overlay = () => (
     w='100vw'
     h='100vh'
     // main='center'
-    // cross='center'
+    cross='center'
     style={{
       // background: 'rgba(0,0,0,0.4)',
-      // backdropFilter: 'blur(1px)',
-      color: 'white',
-      fontSize: '3rem',
+      backdropFilter: 'blur(1.4px)',
       // fontWeight: 'bold',
     }}
   >
-    <Text as='h1'>
-      HELLO
-    </Text>
+    <View 
+      cross='center'
+      mt='10vh'
+      absolute
+      x='50%'
+      y='20%'
+      w='92%'
+      style={{
+        transform: 'translate(-50%, -50%)',
+        // border: '2px solid black',
+      }}
+    >
+      <Text as='h1'>
+        HELLO, I'M ROMULLO
+      </Text>
+      <Text center style={{ maxWidth: '82rem' }}>
+        I'm a software engineer based in Tokyo, specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.
+      </Text>
+    </View>
   </View>
 )
 
@@ -36,7 +50,6 @@ export const Home = () => {
         background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(${backgroundUrl})`,
       }}
     >
-      {/* <h1 className={styles.title}>SOMETHING</h1> */}
       <Floating />
       <Overlay />
     </View>
