@@ -1,7 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ViewType } from './View.types'
+import { Styles } from 'styled-components/dist/types'
 
-export const StyledView = styled.div.attrs<Partial<ViewType>>(({ as }) => ({ as: as || 'div' }))`
+type StyledViewProps = React.HTMLAttributes<HTMLDivElement> & Partial<ViewType>
+
+export const StyledView = styled.div.attrs<StyledViewProps>(({ as }) => ({ as: as || 'div' }))`
   display: flex;
   flex-direction: column; // Only to simulate the React Native workflow
 
@@ -52,5 +55,5 @@ export const StyledView = styled.div.attrs<Partial<ViewType>>(({ as }) => ({ as:
   ${({ $absolute, $y }) => $absolute && $y && `top: ${typeof $y === 'number' ? `${$y}px` : $y};`};
   ${({ $absolute, $by }) => $absolute && $by && `bottom: ${typeof $by === 'number' ? `${$by}px` : $by};`};
 
-  ${props => props.style};
+  ${({ style }) => style && css(style as Styles<object>)};
 `

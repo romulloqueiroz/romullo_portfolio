@@ -1,8 +1,9 @@
 'use client'
+import { forwardRef } from 'react'
 import { ViewType } from './View.types'
 import { StyledView } from './View.styles'
 
-export const View: React.FC<Partial<ViewType>> = ({
+const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
   children,
   // paddings
   ph,
@@ -52,7 +53,7 @@ export const View: React.FC<Partial<ViewType>> = ({
   by,
   style,
   as,
-}) => (
+}, ref) => (
   <StyledView
     $ph={ph}
     $pv={pv}
@@ -101,7 +102,10 @@ export const View: React.FC<Partial<ViewType>> = ({
     $by={by}
     style={style}
     as={as}
+    ref={ref}
   >
     {children}
   </StyledView>
-)
+))
+
+export { View }

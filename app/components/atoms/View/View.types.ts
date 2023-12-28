@@ -1,5 +1,4 @@
-import { ReactNode, CSSProperties } from 'react'
-import { Interpolation } from 'styled-components'
+import { ReactNode, CSSProperties, RefObject } from 'react'
 
 export interface ViewType {
   children: ReactNode
@@ -96,7 +95,8 @@ export interface ViewType {
   by: CSSProperties['bottom'] // bottom on y 
   $by: CSSProperties['bottom'] // bottom on y
 
-  style: Interpolation<CSSProperties>
-
+  style: CSSProperties
   as?: 'div' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'header' | 'footer'
+
+  ref?: RefObject<HTMLElement>
 }
