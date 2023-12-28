@@ -11,6 +11,7 @@ export const colors = {
   card: '#F1F1F1',
   border: '#A1A5AC',
   placeholder: '#BDBDBD',
+  background: '#fafafa',
 
   // Colors
   purple: '#7843e9',

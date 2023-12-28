@@ -11,7 +11,6 @@ const About = () => (
     h='100vh'
     as='section'
     pt='12rem'
-    style={{ border: '2px solid green' }}
     cross='center'
   >
     <View mb='9rem' cross='center'>
