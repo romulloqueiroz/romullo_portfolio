@@ -14,13 +14,16 @@ export const colors = {
 
   // Colors
   purple: '#7843e9',
-  green: '#5DB075',
-  green2: '#0F8955',
-  red: '#E56250',
-  red2: '#F63030',
-  yellow: '#FBFF2F',
-  gold: '#FFB84E',
-  blue: '#3038F6',
+  blue: '#4285F4',        // Complementary color to orange (opposite on the color wheel)
+  orange: '#FFA500',      // Complementary color to blue (opposite on the color wheel)
+  green: '#00C851',       // Analogous color to blue (next to each other on the color wheel)
+  pink: '#FF4081',        // Analogous color to purple (next to each other on the color wheel)
+  yellow: '#FFD300',      // Analogous color to orange (next to each other on the color wheel)
+  teal: '#008080',        // Triadic color with blue and green
+  red: '#FF0000',         // Complementary color to green (opposite on the color wheel)
+  cyan: '#00FFFF',        // Triadic color with blue and green
+  lavender: '#967bb6',    // Analogous color to purple (varied shade)
+  gold: '#FFD700',        // Triadic color with purple and green
 
   // Transparencies
   glass: 'rgba(153,153,153,.2)',
