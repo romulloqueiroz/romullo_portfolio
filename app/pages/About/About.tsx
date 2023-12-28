@@ -14,18 +14,14 @@ const About = () => (
     style={{ border: '2px solid green' }}
     cross='center'
   >
-    <View 
-      mb='9rem'
-      cross='center'
-      h='80vh'
-    >
+    <View mb='9rem' cross='center'>
       <Text as='h2' mb='3.5rem'>
         ABOUT ME
       </Text>
       <BilingualText
         txtBack={japTxt}
         txtFront={engTxt}
-        maxWidth='85rem'
+        maxWidth='800px'
       />
     </View>
   </View>

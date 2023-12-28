@@ -1,5 +1,8 @@
 import React from 'react'
-import { View, Text } from '@atoms'
+import { View, Text, BilingualText } from '@atoms'
+
+const engTxt = 'Some projects I have worked on, and some I am currently working on'
+const japTxt = '私が取り組んできたプロジェクトと、現在取り組んでいるプロジェクト'
 
 const Projects = () => {
   return (
@@ -12,9 +15,11 @@ const Projects = () => {
     >
       <View mb='9rem' cross='center'>
         <Text as='h2'>PROJECTS</Text>
-        <Text center style={{ maxWidth: '80rem' }}>
-          Some projects I have worked on, and some I am currently working on
-        </Text>
+        <BilingualText
+          txtBack={japTxt}
+          txtFront={engTxt}
+          maxWidth='597px'
+        />
       </View>
     </View>
   )
