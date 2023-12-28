@@ -16,7 +16,7 @@ const Contact = () => (
       background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
     }}
   >
-    <View mb='9rem' cross='center'>
+    <View mb='6rem' cross='center'>
       <Text as='h2'>CONTACT</Text>
       <BilingualText
         txtBack={japTxt}
@@ -24,6 +24,19 @@ const Contact = () => (
         maxWidth='447px'
       />
     </View>
+
+    <View 
+      style={{ 
+        maxWidth: '80rem',
+        background: 'white',
+        boxShadow: 'rgba(100,100,111,.2) 0 7px 29px 0'
+      }}
+      br={5}
+      m='5rem auto 0 auto'
+      w='95%'
+      h={400}
+      p='4rem'
+    />
   </View>
 )
 
