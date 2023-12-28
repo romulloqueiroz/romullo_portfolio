@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Floating } from '@atoms'
+import { View, Text, Floating } from '@atoms'
 
 const backgroundUrl = 'https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg'
 
@@ -18,8 +18,9 @@ const Overlay = () => (
       // fontWeight: 'bold',
     }}
   >
-    <h1
-    >HELLO</h1>
+    <Text as='h1'>
+      HELLO
+    </Text>
   </View>
 )
 
