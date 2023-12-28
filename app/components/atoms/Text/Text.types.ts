@@ -1,5 +1,5 @@
 import { ColorType } from '@styles'
-import { ReactNode, CSSProperties } from 'react'
+import { ReactNode, CSSProperties, RefObject } from 'react'
 import { Interpolation } from 'styled-components'
 
 export interface TextType {
@@ -23,7 +23,7 @@ export interface TextType {
   mt: CSSProperties['marginTop']
   $mt: CSSProperties['marginTop']
 
-  style: Interpolation<CSSProperties>
+  style: CSSProperties
 
   as?: 'p' | 'h1' | 'h2' | 'h3'
 }

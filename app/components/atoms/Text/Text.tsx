@@ -1,8 +1,8 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { TextType } from './Text.types'
 import { StyledView } from './Text.styles'
 
-const Text: React.FC<Partial<TextType>> = ({
+const Text = forwardRef<HTMLParagraphElement, Partial<TextType>>(({
   children,
   weight,
   size,
@@ -14,7 +14,7 @@ const Text: React.FC<Partial<TextType>> = ({
   mt,
   style,
   as,
-}) => (
+}, ref) => (
   <StyledView
     $weight={weight}
     $size={size}
@@ -26,9 +26,10 @@ const Text: React.FC<Partial<TextType>> = ({
     $mt={mt}
     style={style}
     as={as}
+    ref={ref}
   >
     {children}
   </StyledView>
-)
+))
 
 export { Text }

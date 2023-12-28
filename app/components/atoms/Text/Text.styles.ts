@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { TextType } from './Text.types'
 
-export const StyledView = styled.p.attrs<Partial<TextType>>(({ as }) => ({ as: as || 'p' }))`
+type StyledViewProps = React.HTMLAttributes<HTMLParagraphElement> & Partial<TextType>
+
+export const StyledView = styled.p.attrs<StyledViewProps>(({ as }) => ({ as: as || 'p' }))`
   ${({ $mb }) => $mb && `margin-bottom: ${typeof $mb === 'number' ? `${$mb}px` : $mb};`};
   ${({ $ml }) => $ml && `margin-left: ${typeof $ml === 'number' ? `${$ml}px` : $ml};`};
   ${({ $mt }) => $mt && `margin-top: ${typeof $mt === 'number' ? `${$mt}px` : $mt};`};
