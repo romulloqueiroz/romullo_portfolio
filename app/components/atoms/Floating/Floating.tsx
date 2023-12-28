@@ -1,10 +1,9 @@
 'use client'
 import { Canvas } from '@react-three/fiber'
-// import { Model } from './Model'
-import { Model } from './Testing'
 import { OrbitControls, Environment } from '@react-three/drei'
 import { useMotionValue, useSpring } from 'framer-motion'
 import { useEffect } from 'react'
+import { Testando } from './Testando'
 
 export const Floating = () => {
 
@@ -13,10 +12,10 @@ export const Floating = () => {
     y: useMotionValue(0)
   }
 
-  const smoothMouse = {
-    x: useSpring(mouse.x, {stiffness: 75, damping: 100, mass: 3}),
-    y: useSpring(mouse.y, {stiffness: 75, damping: 100, mass: 3})
-  }
+  // const smoothMouse = {
+  //   x: useSpring(mouse.x, {stiffness: 75, damping: 100, mass: 3}),
+  //   y: useSpring(mouse.y, {stiffness: 75, damping: 100, mass: 3})
+  // }
 
   const manageMouse = (e: { clientX: any, clientY: any }) => {
     const { innerWidth, innerHeight } = window
@@ -33,24 +32,10 @@ export const Floating = () => {
   }, [])
 
   return (
-    <Canvas 
-      style={{
-        background: '#282A36',
-        display: 'flex',
-        height: '100%',
-        width: '100%',
-      }} 
-      orthographic 
-      camera={{
-        position: [0, 200, 200], 
-        zoom: 10
-      }}
-    >
-      {/* <OrbitControls /> */}
-      {/* <ambientLight intensity={0.8} /> */}
-      {/* <pointLight position={[10, 10, 10]} /> */}
-      <Model mouse={smoothMouse} />
-      <Environment preset="lobby" />
-    </Canvas>
+    <>
+      <Testando />
+    </>
   )
 }
+
+

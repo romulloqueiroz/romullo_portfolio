@@ -23,6 +23,13 @@
       "@/*": ["./*"],
       "@components/*": ["app/components/atoms/*"],
       "@atoms": ["app/components/atoms/index"],
+      "@molecules": ["app/components/molecules/index"],
+      "@organisms": ["app/components/organisms/index"],
+      "@templates": ["app/components/templates/index"],
+      "@pages": ["app/pages/index"],
+      "@styles": ["app/styles/index"],
+      "@utils": ["app/utils/index"],
+      "@hooks": ["app/hooks/index"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/atoms/Floating/Model.js", "app/components/atoms/Floating/Testing.js"],

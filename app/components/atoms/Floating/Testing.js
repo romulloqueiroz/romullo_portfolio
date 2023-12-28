@@ -8,34 +8,34 @@ export function Model({ mouse }) {
   return (
     <Float>
       <group dispose={null}>
-          <group position={[0, 0, 0]}>
-            <Mesh node={nodes.react_mesh} mouse={mouse} multiplier={2.4} />
-            <Mesh node={nodes.react_mesh_1} mouse={mouse} multiplier={2.4} />
-          </group>
+        <group position={[0, 0, 0]}>
+          <Mesh node={nodes.react_mesh} mouse={mouse} multiplier={2.4} />
+          <Mesh node={nodes.react_mesh_1} mouse={mouse} multiplier={2.4} />
+        </group>
 
-          <group position={[20, 0, 0]}>
-            <Mesh node={nodes.ts_mesh} mouse={mouse} multiplier={1.8} />
-            <Mesh node={nodes.ts_mesh_1} mouse={mouse} multiplier={1.8} />
-          </group>
+        <group position={[20, 0, 0]}>
+          <Mesh node={nodes.ts_mesh} mouse={mouse} multiplier={1.8} />
+          <Mesh node={nodes.ts_mesh_1} mouse={mouse} multiplier={1.8} />
+        </group>
 
-          <group position={[20, 0, 20]}>
-            <Mesh node={nodes.js_mesh} mouse={mouse} multiplier={1.2} />
-            <Mesh node={nodes.js_mesh_1} mouse={mouse} multiplier={1.2} />
-          </group>
+        <group position={[20, 0, 20]}>
+          <Mesh node={nodes.js_mesh} mouse={mouse} multiplier={1.2} />
+          <Mesh node={nodes.js_mesh_1} mouse={mouse} multiplier={1.2} />
+        </group>
 
-          <group position={[40, 0, 20]}>
-            <Mesh node={nodes.figma_mesh} mouse={mouse} multiplier={1.6} />
-            <Mesh node={nodes.figma_mesh_1} mouse={mouse} multiplier={1.6} />
-            <Mesh node={nodes.figma_mesh_2} mouse={mouse} multiplier={1.6} />
-            <Mesh node={nodes.figma_mesh_3} mouse={mouse} multiplier={1.6} />
-            <Mesh node={nodes.figma_mesh_4} mouse={mouse} multiplier={1.6} />
-          </group>
+        <group position={[40, 0, 20]}>
+          <Mesh node={nodes.figma_mesh} mouse={mouse} multiplier={1.6} />
+          <Mesh node={nodes.figma_mesh_1} mouse={mouse} multiplier={1.6} />
+          <Mesh node={nodes.figma_mesh_2} mouse={mouse} multiplier={1.6} />
+          <Mesh node={nodes.figma_mesh_3} mouse={mouse} multiplier={1.6} />
+          <Mesh node={nodes.figma_mesh_4} mouse={mouse} multiplier={1.6} />
+        </group>
 
-          <group position={[40, 0, 0]}>
-            <Mesh node={nodes.blender_mesh} mouse={mouse} multiplier={1.5} />
-            <Mesh node={nodes.blender_mesh_1} mouse={mouse} multiplier={1.5} />
-            <Mesh node={nodes.blender_mesh_2} mouse={mouse} multiplier={1.5} />
-          </group>
+        <group position={[40, 0, 0]}>
+          <Mesh node={nodes.blender_mesh} mouse={mouse} multiplier={1.5} />
+          <Mesh node={nodes.blender_mesh_1} mouse={mouse} multiplier={1.5} />
+          <Mesh node={nodes.blender_mesh_2} mouse={mouse} multiplier={1.5} />
+        </group>
       </group>
     </Float>
   )
