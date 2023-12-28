@@ -8,12 +8,10 @@ const Overlay = () => (
     absolute
     w='100vw'
     h='100vh'
-    // main='center'
     cross='center'
     style={{
       // background: 'rgba(0,0,0,0.4)',
       backdropFilter: 'blur(1.4px)',
-      // fontWeight: 'bold',
     }}
   >
     <View 
