@@ -1,3 +1,7 @@
+import { Hero } from './Hero/Hero'
 import { LinkMenu } from './LinkMenu/LinkMenu'
 
-export { LinkMenu }
+export { 
+  Hero,
+  LinkMenu
+}

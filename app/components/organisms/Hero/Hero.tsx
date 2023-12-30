@@ -1,5 +1,4 @@
 import { View } from '@atoms'
-import { Front } from './Front'
 import { Mask } from '@molecules'
 
 export const Hero = () => (
@@ -14,6 +13,5 @@ export const Hero = () => (
     h='60vh'
   >
     <Mask />
-    <Front />
   </View>
 )

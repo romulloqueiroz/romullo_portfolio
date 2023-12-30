@@ -1,6 +1,5 @@
 import { View } from '@atoms'
-import { Hero } from './Hero'
-import { LinkMenu } from '@organisms'
+import { Hero, LinkMenu } from '@organisms'
 
 export const Overlay = () => (
   <View
