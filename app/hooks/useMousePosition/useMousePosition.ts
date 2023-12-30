@@ -11,8 +11,8 @@ const useMousePosition = () => {
   }
 
   const smoothMouse = {
-    x: useSpring(mouse.x, { stiffness: 600, damping: 60 }),
-    y: useSpring(mouse.y, { stiffness: 600, damping: 60 }),
+    x: useSpring(mouse.x, { stiffness: 300, damping: 20, mass: 0.5 }),
+    y: useSpring(mouse.y, { stiffness: 300, damping: 20, mass: 0.5 }),
   }
 
   const manageMouseMove = (e: MouseEvent) => {

@@ -1,5 +1,5 @@
 import { Char } from '../Char/Char'
-import { Text } from '../../Text/Text'
+import { Text } from '../../../atoms/Text/Text'
 import { WordProps } from './Word.types'
 
 export const Word: React.FC<WordProps> = ({word, progress, range, back}) => {

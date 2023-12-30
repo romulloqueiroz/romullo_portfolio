@@ -19,9 +19,14 @@ export const Magnetic: React.FC<MagneticProps> = ({ children }) => {
   const reset = () => { setPosition({ x: 0, y: 0 }) }
 
   const { x, y } = position
+  
   return (
     <motion.div
-      style={{ position: 'relative' }}
+      style={{ 
+        position: 'relative',
+        // top: 10,
+        // left: 10,
+      }}
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}

@@ -72,8 +72,8 @@ export interface ViewType {
   $row: boolean
   main: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-evenly' | 'space-around'
   $main: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-evenly' | 'space-around'
-  cross: 'flex-start' | 'center' | 'flex-end'
-  $cross: 'flex-start' | 'center' | 'flex-end'
+  cross: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-evenly' | 'space-around'
+  $cross: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-evenly' | 'space-around'
 
   // overflow
   overflow: 'hidden' | 'visible' | 'scroll'

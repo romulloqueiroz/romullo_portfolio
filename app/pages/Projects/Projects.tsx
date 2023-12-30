@@ -1,6 +1,6 @@
-import React from 'react'
-import { View, Text, BilingualText } from '@atoms'
 import { colors } from '@styles'
+import { View, Text } from '@atoms'
+import { BilingualText } from '@molecules'
 
 const engTxt = 'Some projects I have worked on, and some I am currently working on'
 const japTxt = '私が取り組んできたプロジェクトと、現在取り組んでいるプロジェクト'

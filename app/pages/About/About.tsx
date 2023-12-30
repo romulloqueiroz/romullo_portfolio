@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text, BilingualText } from '@atoms'
+import { View, Text } from '@atoms'
+import { BilingualText } from '@molecules'
 
 const engTxt = "I'm a software engineer based in Tokyo, specializing in building (and occasionally designing) exceptional websites, applications, and everything in between."
 

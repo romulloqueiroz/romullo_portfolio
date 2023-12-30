@@ -2,8 +2,8 @@
 import { MotionValue, useScroll } from 'framer-motion'
 import React, { useRef } from 'react'
 import { Word } from './Word/Word'
-import { View } from '../View/View'
-import { Text } from '../Text/Text'
+import { View } from '../../atoms/View/View'
+import { Text } from '../../atoms/Text/Text'
 import { BilingualTextProps } from './BilingualText.types'
 
 export const BilingualText: React.FC<BilingualTextProps> = ({ txtBack, txtFront, maxWidth }) => {

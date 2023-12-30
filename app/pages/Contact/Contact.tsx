@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text, BilingualText } from '@atoms'
+import { View, Text } from '@atoms'
+import { BilingualText } from '@molecules'
 
 const backgroundUrl = 'https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg'
 

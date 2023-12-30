@@ -1,13 +1,13 @@
-import { View } from './View/View'
-import { Text } from './Text/Text'
-import { BilingualText } from './BilingualText/BilingualText'
+import { Cursor } from './Cursor/Cursor'
 import { Icon } from './Icon/Icon'
 import { Magnetic } from './Magnetic/Magnetic'
+import { Text } from './Text/Text'
+import { View } from './View/View'
 
-export { 
-  View, 
-  Text, 
-  BilingualText,
+export {
+  Cursor, 
   Icon,
   Magnetic,
+  Text, 
+  View, 
 }
