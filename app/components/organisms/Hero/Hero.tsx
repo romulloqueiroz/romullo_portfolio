@@ -18,6 +18,7 @@ export const Hero = () => (
       type='h1' 
       txtBack='こんにちは、ロムロです。'
       txtFront='HELLO, I’M ROMULLO'
+      color='blue'
     />
   </View>
 )

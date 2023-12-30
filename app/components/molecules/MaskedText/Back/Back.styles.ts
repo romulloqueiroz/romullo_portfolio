@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
-import { colors } from '@styles'
+import { ColorType, colors } from '@styles'
 
 const generateFlicker = () => {
   const keyframes = `
@@ -14,13 +14,12 @@ const generateFlicker = () => {
       transform: rotate(${Math.random() * 5 - 2}deg);
     }
   `
-
   return keyframes
 }
 
 const flicker = keyframes`${generateFlicker()}`
 
-export const StyledBack = styled(motion.div)`
+export const StyledBack = styled(motion.div)<{ color: keyof ColorType }>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -29,7 +28,7 @@ export const StyledBack = styled(motion.div)`
 
   mask-image: url('/stain.png');
   mask-repeat: no-repeat;
-  background: ${colors.blue};
+  background: ${({ color }: { color: keyof ColorType }) => colors[color]};
   position: absolute;
   animation: ${flicker} 6s infinite;
   transform-origin: center;

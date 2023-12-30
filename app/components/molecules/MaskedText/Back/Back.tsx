@@ -4,7 +4,7 @@ import { useMousePosition } from '@hooks'
 import { StyledBack } from './Back.styles'
 import { BackProps } from './Back.types'
 
-export const Back: React.FC<BackProps> = ({ type, txtBack }) => {
+export const Back: React.FC<BackProps> = ({ color, type, txtBack }) => {
   const [isHovered, setIsHovered] = useState(false)
   const { xNumber, yNumber } = useMousePosition()
 
@@ -18,6 +18,7 @@ export const Back: React.FC<BackProps> = ({ type, txtBack }) => {
         WebkitMaskSize: `${size}px`,
       }}
       transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
+      color={color}
     >
       <Text
         as={type}
