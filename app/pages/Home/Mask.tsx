@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import React, { useState } from 'react'  
-import { motion } from 'framer-motion'
+import { MotionValue, motion } from 'framer-motion'
 import { Text } from '@atoms'
 import { colors } from '@styles'
 
@@ -62,7 +62,7 @@ export const Mask: React.FC<MaskProps> = ({ x, y }) => {
         onMouseLeave={() => setIsHovered(false)} 
         style={{ cursor: 'none' }}
       >
-        今日は、ロムロです。
+        こんにちは、ロムロです。
       </Text>
     </StyledMask>
   )
