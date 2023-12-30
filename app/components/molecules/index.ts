@@ -1,7 +1,9 @@
-import { StickyButton } from './StickyButton/StickyButton'
 import { BilingualText } from './BilingualText/BilingualText'
+import { Mask } from './Mask/Mask'
+import { StickyButton } from './StickyButton/StickyButton'
 
 export { 
-  StickyButton,
   BilingualText, 
+  Mask,
+  StickyButton,
 }
