@@ -34,7 +34,7 @@ const Hero = () => {
 }
 
 export const Overlay = () => {
-  const { x, y } = useMousePosition()
+  const { xSmooth, ySmooth } = useMousePosition()
   return (
     <View
       absolute
@@ -43,7 +43,7 @@ export const Overlay = () => {
       cross='center'
       style={{ backdropFilter: 'blur(1.2px)' }}
     >
-      <Cursor style={{ left: x, top: y }} />
+      <Cursor style={{ left: xSmooth, top: ySmooth }} />
       <Hero />
     </View>
   )

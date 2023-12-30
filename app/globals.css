@@ -11,6 +11,7 @@ body {
   overflow-x: hidden;
   background: #f0f0f0;
   font-size: 59%;
+  /* cursor: none; */
 }
 
 a {

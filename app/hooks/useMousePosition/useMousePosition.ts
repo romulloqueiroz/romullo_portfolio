@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useMotionValue } from 'framer-motion'
+import { useMotionValue, useSpring } from 'framer-motion'
 
 const useMousePosition = () => {
   const [mouseNumber, setMouse] = useState({ x: 0, y: 0 })
@@ -8,6 +8,11 @@ const useMousePosition = () => {
   const mouse = {
     x: useMotionValue(-cursorSize / 2),
     y: useMotionValue(-cursorSize / 2),
+  }
+
+  const smoothMouse = {
+    x: useSpring(mouse.x, { stiffness: 600, damping: 60 }),
+    y: useSpring(mouse.y, { stiffness: 600, damping: 60 }),
   }
 
   const manageMouseMove = (e: MouseEvent) => {
@@ -22,7 +27,14 @@ const useMousePosition = () => {
     return () => window.removeEventListener('mousemove', manageMouseMove)
   }, [])
 
-  return { x: mouse.x, y: mouse.y, xNumber: mouseNumber.x, yNumber: mouseNumber.y }
+  return { 
+    x: mouse.x, 
+    y: mouse.y, 
+    xNumber: mouseNumber.x, 
+    yNumber: mouseNumber.y,
+    xSmooth: smoothMouse.x,
+    ySmooth: smoothMouse.y
+  }
 }
 
 export { useMousePosition }
