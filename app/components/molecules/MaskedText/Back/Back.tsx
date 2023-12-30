@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Text } from '@atoms'
 import { useMousePosition } from '@hooks'
-import { StyledMask } from './Mask.styles'
+import { StyledBack } from './Back.styles'
+import { BackProps } from './Back.types'
 
-export const Back = () => {
+export const Back: React.FC<BackProps> = ({ type, txtBack }) => {
   const [isHovered, setIsHovered] = useState(false)
   const { xNumber, yNumber } = useMousePosition()
 
@@ -11,7 +12,7 @@ export const Back = () => {
   const xPos = xNumber !== null ? xNumber : 0
   const yPos = yNumber !== null ? yNumber : 0
   return (
-    <StyledMask
+    <StyledBack
       animate={{
         WebkitMaskPosition: `${xPos - (size / 2)}px ${yPos - (size / 2)}px`,
         WebkitMaskSize: `${size}px`,
@@ -19,13 +20,13 @@ export const Back = () => {
       transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
     >
       <Text
-        as='h1'
+        as={type}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{ cursor: 'none' }}
       >
-        こんにちは、ロムロです。
+        {txtBack}
       </Text>
-    </StyledMask>
+    </StyledBack>
   )
 }

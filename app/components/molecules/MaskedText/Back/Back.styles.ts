@@ -20,7 +20,7 @@ const generateFlicker = () => {
 
 const flicker = keyframes`${generateFlicker()}`
 
-export const StyledMask = styled(motion.div)`
+export const StyledBack = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;

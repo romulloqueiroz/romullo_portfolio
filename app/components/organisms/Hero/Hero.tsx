@@ -1,17 +1,23 @@
 import { View } from '@atoms'
-import { Mask } from '@molecules'
+import { MaskedText } from '@molecules'
 
 export const Hero = () => (
   <View
-    cross='center'
     mt='10vh'
     absolute
     x='50%'
     y='20%'
-    w='92%'
-    style={{ transform: 'translate(-50%, -50%)' }}
-    h='60vh'
+    w='100%'
+    cross='center'
+    style={{ 
+      transform: 'translate(-50%, -50%)',
+      border: '1px solid orangered',
+    }}
   >
-    <Mask />
+    <MaskedText 
+      type='h1' 
+      txtBack='こんにちは、ロムロです。'
+      txtFront='HELLO, I’M ROMULLO'
+    />
   </View>
 )
