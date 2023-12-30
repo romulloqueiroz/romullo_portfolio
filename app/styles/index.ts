@@ -1,5 +1,5 @@
-import { colors } from './colors'
-import type { ColorType } from './colors'
+import { colors, type ColorType } from './colors'
+import { icon, type IconType } from './icons'
 
-export { colors }
-export type { ColorType }
+export { colors, icon }
+export type { ColorType, IconType }
