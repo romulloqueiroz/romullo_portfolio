@@ -15,6 +15,7 @@ export const MaskedText: React.FC<MaskedTextProps> = ({ type, color, txtHidden, 
       h={type === 'h1' ? 360 : 260}
       w='100%'
       ref={ref}
+      z={400}
     >
       <Visible 
         type={type} 
