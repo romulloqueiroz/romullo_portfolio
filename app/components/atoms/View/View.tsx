@@ -45,8 +45,8 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
   overflow,
   overflowHidden,
   // position
-  position,
   absolute,
+  fixed,
   x,
   rx,
   y,
@@ -96,8 +96,8 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
     $overflow={overflow}
     $overflowHidden={overflowHidden}
     // position
-    $position={position}
     $absolute={absolute}
+    $fixed={fixed}
     $x={x}
     $rx={rx}
     $y={y}

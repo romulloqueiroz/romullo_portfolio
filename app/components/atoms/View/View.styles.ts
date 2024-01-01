@@ -49,12 +49,12 @@ export const StyledView = styled.div.attrs<StyledViewProps>(({ as }) => ({ as: a
   ${({ $overflow }) => $overflow && `overflow: ${$overflow};`};
   ${({ $overflowHidden }) => $overflowHidden && `overflow: hidden;`};
 
-  ${({ $position }) => $position && `position: ${$position};`};
   ${({ $absolute }) => $absolute && `position: absolute;`};
-  ${({ $absolute, $x }) => $absolute && $x && `left: ${typeof $x === 'number' ? `${$x}px` : $x};`};
-  ${({ $absolute, $rx }) => $absolute && $rx && `right: ${typeof $rx === 'number' ? `${$rx}px` : $rx};`};
-  ${({ $absolute, $y }) => $absolute && $y && `top: ${typeof $y === 'number' ? `${$y}px` : $y};`};
-  ${({ $absolute, $by }) => $absolute && $by && `bottom: ${typeof $by === 'number' ? `${$by}px` : $by};`};
+  ${({ $fixed }) => $fixed && `position: fixed;`};
+  ${({ $absolute, $fixed, $x }) => ($absolute || $fixed) && $x && `left: ${typeof $x === 'number' ? `${$x}px` : $x};`};
+  ${({ $absolute, $fixed, $rx }) => ($absolute || $fixed) && $rx && `right: ${typeof $rx === 'number' ? `${$rx}px` : $rx};`};
+  ${({ $absolute, $fixed, $y }) => ($absolute || $fixed) && $y && `top: ${typeof $y === 'number' ? `${$y}px` : $y};`};
+  ${({ $absolute, $fixed, $by }) => ($absolute || $fixed) && $by && `bottom: ${typeof $by === 'number' ? `${$by}px` : $by};`};
 
   ${({ $z }) => $z && `z-index: ${$z};`};
 

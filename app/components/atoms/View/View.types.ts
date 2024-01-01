@@ -82,10 +82,10 @@ export interface ViewType {
   $overflowHidden: boolean
   
   // position
-  position: 'absolute' | 'fixed'
-  $position: 'absolute' | 'fixed'
   absolute: boolean
   $absolute: boolean
+  fixed: boolean
+  $fixed: boolean
   x: CSSProperties['left']
   $x: CSSProperties['left']
   rx: CSSProperties['right'] // right on x 

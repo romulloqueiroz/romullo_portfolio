@@ -13,9 +13,9 @@ export const LinkMenu = () => {
       <Cursor stickyElement={mediumRef} />
       <View
         as='nav'
-        absolute
-        x={10}
-        by={48}
+        fixed
+        x={20}
+        by={20}
         w={60}
         h={160}
         main='space-between'
