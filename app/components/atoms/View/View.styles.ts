@@ -6,7 +6,8 @@ type StyledViewProps = React.HTMLAttributes<HTMLDivElement> & Partial<ViewType>
 
 export const StyledView = styled.div.attrs<StyledViewProps>(({ as }) => ({ as: as || 'div' }))`
   display: flex;
-  flex-direction: column; // Only to simulate the React Native workflow
+  flex-direction: column;
+  position: relative;
 
   ${({ $p }) => $p && `padding: ${typeof $p === 'number' ? `${$p}px` : $p};`};
   ${({ $ph }) => $ph && `padding: 0 ${typeof $ph === 'number' ? `${$ph}px` : $ph};`};

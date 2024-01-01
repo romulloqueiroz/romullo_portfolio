@@ -16,7 +16,7 @@ export const Home = () => (
       background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
     }}
   >
-    <Home3D />
+    {/* <Home3D /> */}
     <Overlay />
   </View>
 )

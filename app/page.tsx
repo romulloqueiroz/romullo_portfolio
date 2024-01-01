@@ -33,8 +33,8 @@ const Page = () => {
   return (
     <>
       <Home />
-      <About />
-      <Projects />
+      {/* <About /> */}
+      {/* <Projects /> */}
       {/* <Contact /> */}
     </>
   )

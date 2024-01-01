@@ -1,8 +1,8 @@
 import type { ColorType } from '@styles'
 
-export interface BackProps {
+export interface HiddenProps {
   type: 'h1' | 'h2'
-  txtBack: string
+  txtHidden: string
   color: keyof ColorType
   x: number
   y: number

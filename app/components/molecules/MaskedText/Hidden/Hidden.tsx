@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Text } from '@atoms'
-import { useMousePosition } from '@hooks'
-import { StyledBack } from './Back.styles'
-import { BackProps } from './Back.types'
+import { StyledHidden } from './Hidden.styles'
+import { HiddenProps } from './Hidden.types'
 
-export const Back: React.FC<BackProps> = ({ color, type, txtBack, x, y }) => {
+export const Hidden: React.FC<HiddenProps> = ({ color, type, txtHidden, x, y }) => {
   const [isHovered, setIsHovered] = useState(false)
-
   const size = isHovered ? (type === 'h1' ? 280 : 200) : 0
   const xPos = x !== null ? x : 0
   const yPos = y !== null ? y : 0
   return (
-    <StyledBack
+    <StyledHidden
       animate={{
         WebkitMaskPosition: `${xPos - (size / 2)}px ${yPos - (size / 2)}px`,
         WebkitMaskSize: `${size}px`,
@@ -25,8 +23,8 @@ export const Back: React.FC<BackProps> = ({ color, type, txtBack, x, y }) => {
         onMouseLeave={() => setIsHovered(false)}
         style={{ cursor: 'none' }}
       >
-        {txtBack}
+        {txtHidden}
       </Text>
-    </StyledBack>
+    </StyledHidden>
   )
 }

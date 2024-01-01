@@ -1,11 +1,11 @@
-import { Front } from './Front/Front'
-import { Back } from './Back/Back'
+import { useRef } from 'react'
+import { Visible } from './Visible/Visible'
+import { Hidden } from './Hidden/Hidden'
 import { View } from '@atoms'
 import { MaskedTextProps } from './MaskedText.types'
-import { useRef } from 'react'
 import { useMousePosition } from '@hooks'
 
-export const MaskedText: React.FC<MaskedTextProps> = ({ type, color, txtBack, txtFront }) => {
+export const MaskedText: React.FC<MaskedTextProps> = ({ type, color, txtHidden, txtVisible }) => {
   const ref = useRef(null)
   const { xNumber, yNumber } = useMousePosition(ref)
 
@@ -16,16 +16,16 @@ export const MaskedText: React.FC<MaskedTextProps> = ({ type, color, txtBack, tx
       w='100%'
       ref={ref}
     >
-      <Back 
+      <Visible 
         type={type} 
-        txtBack={txtBack} 
+        txtVisible={txtVisible} 
+      />
+      <Hidden 
+        type={type} 
+        txtHidden={txtHidden} 
         color={color} 
         x={xNumber}
         y={yNumber}
-      />
-      <Front 
-        type={type} 
-        txtFront={txtFront} 
       />
     </View>
   )

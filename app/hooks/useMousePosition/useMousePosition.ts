@@ -10,6 +10,8 @@ interface MousePosition {
   ySmooth: MotionValue<number>
 }
 
+const springOptions = { stiffness: 300, damping: 20, mass: 0.5 }
+
 const useMousePosition = (ref: React.RefObject<HTMLElement>): MousePosition => {
   const [mouseNumber, setMouse] = useState({ x: 0, y: 0 })
   const cursorSize = 20
@@ -20,8 +22,8 @@ const useMousePosition = (ref: React.RefObject<HTMLElement>): MousePosition => {
   }
 
   const smoothMouse = {
-    x: useSpring(mouse.x, { stiffness: 300, damping: 20, mass: 0.5 }),
-    y: useSpring(mouse.y, { stiffness: 300, damping: 20, mass: 0.5 }),
+    x: useSpring(mouse.x, springOptions),
+    y: useSpring(mouse.y, springOptions),
   }
 
   const manageMouseMove = (event: MouseEvent) => {

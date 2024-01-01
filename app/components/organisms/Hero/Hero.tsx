@@ -3,21 +3,18 @@ import { MaskedText } from '@molecules'
 
 export const Hero = () => (
   <View
-    mt='10vh'
     absolute
-    x='50%'
-    y='20vh'
+    y='4vh'
     w='100%'
     cross='center'
     style={{ 
-      transform: 'translate(-50%, -50%)',
-      // border: '1px solid orangered',
+      border: '1px solid purple',
     }}
   >
     <MaskedText 
       type='h1' 
-      txtBack='こんにちは、ロムロです。'
-      txtFront='HELLO, I’M ROMULLO'
+      txtHidden='こんにちは、ロムロです。'
+      txtVisible='HELLO, I’M ROMULLO'
       color='blue'
     />
   </View>

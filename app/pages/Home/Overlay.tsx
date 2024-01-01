@@ -7,7 +7,10 @@ export const Overlay = () => (
     w='100vw'
     h='100vh'
     cross='center'
-    style={{ backdropFilter: 'blur(1.2px)' }}
+    style={{ 
+      backdropFilter: 'blur(1.2px)',
+      border: '2px solid orangered', 
+    }}
   >
     <LinkMenu />
     <Hero />
