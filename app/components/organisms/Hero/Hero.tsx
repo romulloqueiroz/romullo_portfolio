@@ -6,12 +6,12 @@ export const Hero = () => (
     mt='10vh'
     absolute
     x='50%'
-    y='20%'
+    y='20vh'
     w='100%'
     cross='center'
     style={{ 
       transform: 'translate(-50%, -50%)',
-      border: '1px solid orangered',
+      // border: '1px solid orangered',
     }}
   >
     <MaskedText 

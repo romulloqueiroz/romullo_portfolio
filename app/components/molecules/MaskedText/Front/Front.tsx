@@ -7,6 +7,9 @@ export const Front: React.FC<FrontProps> = ({ type, txtFront }) => (
     h='100%'
     cross='center'
     main='center'
+    style={{
+      // border: '2px solid orangered',
+    }}
   >
     <Text as={type}>{txtFront}</Text>
   </View>

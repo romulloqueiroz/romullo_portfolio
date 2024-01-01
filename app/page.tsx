@@ -35,7 +35,7 @@ const Page = () => {
       <Home />
       <About />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
     </>
   )
 }
