@@ -5,8 +5,8 @@ const engTxt = "I'm a software engineer based in Tokyo, specializing in building
 
 const japTxt = '私は東京を拠点とするソフトウェアエンジニアで、優れたウェブサイト、アプリケーション、そしてその間のすべての構築（そして時折デザイン）を専門としている。'
 
-const txtBack = '私について'
-const txtFront = 'ABOUT ME'
+const txtHidden = '私について'
+const txtVisible = 'ABOUT ME'
 
 const About = () => (
   <View 
@@ -22,18 +22,15 @@ const About = () => (
       maxWidth='800px'
     />
     <View
-      mt='10vh'
       absolute
-      x='50%'
-      y='120vh'
+      y='10vh'
       w='100%'
       cross='center'
-      style={{ transform: 'translate(-50%, -50%)' }}
     >
       <MaskedText 
         type='h2' 
-        txtBack={txtBack}
-        txtFront={txtFront}
+        txtHidden={txtHidden}
+        txtVisible={txtVisible}
         color='orange'
       />
     </View>

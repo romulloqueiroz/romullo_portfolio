@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import styles from './page.module.css'
-import { View } from '@atoms'
 import Lenis from '@studio-freight/lenis'
 import { Home, About, Projects, Contact } from '@pages'
 
@@ -33,9 +31,9 @@ const Page = () => {
   return (
     <>
       <Home />
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
+      <About />
+      <Projects />
+      <Contact />
     </>
   )
 }

@@ -9,7 +9,6 @@ export const Overlay = () => (
     cross='center'
     style={{ 
       backdropFilter: 'blur(1.2px)',
-      border: '2px solid orangered', 
     }}
   >
     <LinkMenu />

@@ -7,9 +7,6 @@ export const Hero = () => (
     y='4vh'
     w='100%'
     cross='center'
-    style={{ 
-      border: '1px solid purple',
-    }}
   >
     <MaskedText 
       type='h1' 
