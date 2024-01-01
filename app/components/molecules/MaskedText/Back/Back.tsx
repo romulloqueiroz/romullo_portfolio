@@ -4,13 +4,12 @@ import { useMousePosition } from '@hooks'
 import { StyledBack } from './Back.styles'
 import { BackProps } from './Back.types'
 
-export const Back: React.FC<BackProps> = ({ color, type, txtBack }) => {
+export const Back: React.FC<BackProps> = ({ color, type, txtBack, x, y }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const { xNumber, yNumber } = useMousePosition()
 
   const size = isHovered ? 280 : 0
-  const xPos = xNumber !== null ? xNumber : 0
-  const yPos = yNumber !== null ? yNumber : 0
+  const xPos = x !== null ? x : 0
+  const yPos = y !== null ? y : 0
   return (
     <StyledBack
       animate={{
