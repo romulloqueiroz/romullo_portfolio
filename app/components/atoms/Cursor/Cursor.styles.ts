@@ -8,4 +8,5 @@ export const StyledCursor = styled(motion.div)`
   height: 20px;
   border-radius: 50%;
   background: ${colors.blue};
+  z-index: 100;
 `

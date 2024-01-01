@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import Lenis from '@studio-freight/lenis'
 import { Home, About, Projects, Contact } from '@pages'
+import { View } from '@atoms'
+import { LinkMenu } from '@organisms'
 
 const Page = () => {
   const [dimension, setDimension] = useState({width:0, height:0})
@@ -29,12 +31,13 @@ const Page = () => {
 
 
   return (
-    <>
+    <View>
+      <LinkMenu />
       <Home />
       <About />
       <Projects />
       <Contact />
-    </>
+    </View>
   )
 }
 

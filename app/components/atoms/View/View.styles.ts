@@ -56,5 +56,7 @@ export const StyledView = styled.div.attrs<StyledViewProps>(({ as }) => ({ as: a
   ${({ $absolute, $y }) => $absolute && $y && `top: ${typeof $y === 'number' ? `${$y}px` : $y};`};
   ${({ $absolute, $by }) => $absolute && $by && `bottom: ${typeof $by === 'number' ? `${$by}px` : $by};`};
 
+  ${({ $z }) => $z && `z-index: ${$z};`};
+
   ${({ style }) => style && css(style as Styles<object>)};
 `

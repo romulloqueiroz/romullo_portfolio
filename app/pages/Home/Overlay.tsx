@@ -1,5 +1,5 @@
 import { View } from '@atoms'
-import { Hero, LinkMenu } from '@organisms'
+import { Hero } from '@organisms'
 
 export const Overlay = () => (
   <View
@@ -11,7 +11,6 @@ export const Overlay = () => (
       backdropFilter: 'blur(1.2px)',
     }}
   >
-    <LinkMenu />
     <Hero />
   </View>
 )

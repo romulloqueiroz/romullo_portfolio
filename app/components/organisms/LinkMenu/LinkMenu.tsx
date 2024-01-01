@@ -12,6 +12,7 @@ export const LinkMenu = () => {
       <Cursor stickyElement={linkedinRef} />
       <Cursor stickyElement={mediumRef} />
       <View
+        as='nav'
         absolute
         x={10}
         by={48}
@@ -19,6 +20,7 @@ export const LinkMenu = () => {
         h={160}
         main='space-between'
         cross='center'
+        z={100}
       >
         <StickyButton
           ref={githubRef}

@@ -51,6 +51,8 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
   rx,
   y,
   by,
+  // z-index
+  z,
   style,
   as,
 }, ref) => (
@@ -100,6 +102,8 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
     $rx={rx}
     $y={y}
     $by={by}
+    // z-index
+    $z={z}
     style={style}
     as={as}
     ref={ref}

@@ -82,8 +82,8 @@ export interface ViewType {
   $overflowHidden: boolean
   
   // position
-  position: 'absolute' | 'relative'
-  $position: 'absolute' | 'relative'
+  position: 'absolute' | 'fixed'
+  $position: 'absolute' | 'fixed'
   absolute: boolean
   $absolute: boolean
   x: CSSProperties['left']
@@ -94,6 +94,10 @@ export interface ViewType {
   $y: CSSProperties['top']
   by: CSSProperties['bottom'] // bottom on y 
   $by: CSSProperties['bottom'] // bottom on y
+
+  // z-index
+  z: CSSProperties['zIndex']
+  $z: CSSProperties['zIndex']
 
   style: CSSProperties
   as?: 'div' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'header' | 'footer'
