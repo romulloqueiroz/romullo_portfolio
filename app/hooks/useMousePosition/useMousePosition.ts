@@ -24,13 +24,6 @@ const useMousePosition = (ref: React.RefObject<HTMLElement>): MousePosition => {
     y: useSpring(mouse.y, { stiffness: 300, damping: 20, mass: 0.5 }),
   }
 
-  // const manageMouseMove = (e: MouseEvent) => {
-  //   const { clientX, clientY } = e
-  //   mouse.x.set(clientX - cursorSize / 2)
-  //   mouse.y.set(clientY - cursorSize / 2)
-  //   setMouse({ x: clientX, y: clientY })
-  // }
-
   const manageMouseMove = (event: MouseEvent) => {
     if (ref.current) {
       const boundingRect = ref.current.getBoundingClientRect()
