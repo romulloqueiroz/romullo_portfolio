@@ -7,7 +7,7 @@ import { BackProps } from './Back.types'
 export const Back: React.FC<BackProps> = ({ color, type, txtBack, x, y }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const size = isHovered ? 280 : 0
+  const size = isHovered ? (type === 'h1' ? 280 : 200) : 0
   const xPos = x !== null ? x : 0
   const yPos = y !== null ? y : 0
   return (

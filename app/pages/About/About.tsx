@@ -38,11 +38,11 @@ const About = () => (
     cross='center'
     style={{ 
       transform: 'translate(-50%, -50%)',
-      border: '1px solid orangered',
+      // border: '1px solid orangered',
     }}
   >
     <MaskedText 
-      type='h1' 
+      type='h2' 
       txtBack={txtBack}
       txtFront={txtFront}
       color='orange'

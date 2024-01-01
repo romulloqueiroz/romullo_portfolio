@@ -12,7 +12,7 @@ export const MaskedText: React.FC<MaskedTextProps> = ({ type, color, txtBack, tx
   return (
     <View 
       cross='center' 
-      h={type === 'h1' ? 480 : 380} // 380 is temporary yet
+      h={type === 'h1' ? 360 : 260}
       w='100%'
       ref={ref}
     >
