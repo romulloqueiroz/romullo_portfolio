@@ -9,7 +9,13 @@ const StickyButton = forwardRef<HTMLDivElement, StickyButtonProps>(({
   onMouseEnter, 
   onMouseLeave 
 }, ref) => (
-  <a href={url} target='_blank' rel='noopener noreferrer' onMouseEnter={onMouseEnter}>
+  <a 
+    href={url} 
+    target='_blank' 
+    rel='noopener noreferrer' 
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     <Magnetic>
       <Icon name={name} />
       <StyledBounds ref={ref} />
