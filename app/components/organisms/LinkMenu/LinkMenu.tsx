@@ -1,16 +1,24 @@
-import { useRef } from 'react'
+import { useState, useRef, createRef, RefObject } from 'react'
 import { View, Cursor } from '@atoms'
 import { StickyButton } from '@molecules'
 
 export const LinkMenu = () => {
-  const githubRef = useRef<HTMLDivElement>(null)
-  const linkedinRef = useRef<HTMLDivElement>(null)
-  const mediumRef = useRef<HTMLDivElement>(null)
+  const initialRef: RefObject<HTMLDivElement> = createRef()
+  const [activeElement, setActiveElement] = useState<RefObject<HTMLDivElement>>(initialRef)
+  const refs = useRef<{ [key: string]: RefObject<HTMLDivElement> }>({
+    github: createRef(),
+    linkedin: createRef(),
+    medium: createRef(),
+  })
+
+  const handleMouseEnter = (key: string) => setActiveElement(refs.current[key])
+  const handleMouseLeave = () => setActiveElement(initialRef)
+
   return (
     <>
-      <Cursor stickyElement={githubRef} />
-      <Cursor stickyElement={linkedinRef} />
-      <Cursor stickyElement={mediumRef} />
+      <Cursor stickyElement={refs.current.github} />
+      <Cursor stickyElement={refs.current.linkedin} />
+      <Cursor stickyElement={refs.current.medium} />
       <View
         as='nav'
         fixed
@@ -23,18 +31,24 @@ export const LinkMenu = () => {
         z={100}
       >
         <StickyButton
-          ref={githubRef}
+          ref={refs.current.github}
           name='github'
+          onMouseEnter={() => handleMouseEnter('github')}
+          onMouseLeave={handleMouseLeave}
           url='https://github.com/romulloqueiroz'
         />
         <StickyButton
-          ref={linkedinRef}
+          ref={refs.current.linkedin}
           name='linkedin'
+          onMouseEnter={() => handleMouseEnter('linkedin')}
+          onMouseLeave={handleMouseLeave}
           url='https://www.linkedin.com/in/romullo-bernardo/'
         />
         <StickyButton
-          ref={mediumRef}
+          ref={refs.current.medium}
           name='medium'
+          onMouseEnter={() => handleMouseEnter('medium')}
+          onMouseLeave={handleMouseLeave}
           url='https://medium.com/@romulloqueiroz'
         />
       </View>
