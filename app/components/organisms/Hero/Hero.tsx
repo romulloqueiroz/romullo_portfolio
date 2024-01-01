@@ -10,7 +10,7 @@ export const Hero = () => (
   >
     <MaskedText 
       type='h1' 
-      txtHidden='こんにちは、ロムロです。'
+      txtHidden='こんにちは、ロムロです'
       txtVisible='HELLO, I’M ROMULLO'
       color='blue'
     />

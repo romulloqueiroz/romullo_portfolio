@@ -11,7 +11,7 @@ export const BilingualText: React.FC<BilingualTextProps> = ({ txtBack, txtFront,
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 0.9', 'start 0.25']
+    offset: ['start 0.9', 'start 0.4']
   })
 
   return (
