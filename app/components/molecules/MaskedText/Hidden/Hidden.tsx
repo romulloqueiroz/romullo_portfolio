@@ -10,6 +10,7 @@ export const Hidden: React.FC<HiddenProps> = ({ color, type, txtHidden, x, y }) 
   const yPos = y !== null ? y : 0
   return (
     <StyledHidden
+      style={{ WebkitMaskSize: `${size}px` }}
       animate={{
         WebkitMaskPosition: `${xPos - (size / 2)}px ${yPos - (size / 2)}px`,
         WebkitMaskSize: `${size}px`,

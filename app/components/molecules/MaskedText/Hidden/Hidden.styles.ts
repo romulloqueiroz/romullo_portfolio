@@ -30,6 +30,6 @@ export const StyledHidden = styled(motion.div)<{ color: keyof ColorType }>`
   mask-repeat: no-repeat;
   background: ${({ color }: { color: keyof ColorType }) => colors[color]};
   position: absolute;
-  animation: ${flicker} 6s infinite;
+  /* animation: ${flicker} 6s infinite; */
   transform-origin: center;
 `

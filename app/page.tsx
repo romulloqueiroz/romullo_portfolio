@@ -34,12 +34,12 @@ const Page = () => {
     <View
       h='100vh'
       w='100vw'
-      style={{
-        border: '2px solid orangered',
-      }}
+      // style={{
+      //   border: '2px solid orangered',
+      // }}
     >
       <LinkMenu />
-      {/* <Home /> */}
+      <Home />
       {/* <About /> */}
       {/* <Projects /> */}
       {/* <Contact /> */}
