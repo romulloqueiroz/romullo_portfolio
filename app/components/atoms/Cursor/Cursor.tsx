@@ -25,12 +25,12 @@ const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
     y: useSpring(mouse.y, smoothOptions)
   }
 
-  const rotate = (distance: { x: any, y: any }) => {
+  const rotate = (distance: { x: number, y: number }) => {
     const angle = Math.atan2(distance.y, distance.x)
     animate(cursor.current, { rotate: `${angle}rad` }, {duration: 0})
   }
 
-  const manageMouseMove = (e: { clientX: any, clientY: any }) => {
+  const manageMouseMove = (e: { clientX: number, clientY: number }) => {
     const { clientX, clientY } = e
   
     if (stickyElement) {

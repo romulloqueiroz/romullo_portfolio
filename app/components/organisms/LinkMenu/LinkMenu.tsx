@@ -8,7 +8,6 @@ export const LinkMenu = () => {
   const handleMouseEnter = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement
     const rect = target.getBoundingClientRect()
-    console.log(rect)
     setActiveButton({ id: target.id, rect })
   }
 
