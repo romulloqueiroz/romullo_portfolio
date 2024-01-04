@@ -5,9 +5,8 @@ import { StyledCursor } from './Cursor.styles'
 import { CursorProps, TransformProps } from './Cursor.types'
 
 const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
-  const [isHovered, setIsHovered] = useState(false)
   const cursor = useRef(null)
-  const cursorSize = isHovered ? 60 : 15
+  const cursorSize = stickyElement ? 60 : 15
 
   const mouse = {
     x: useMotionValue(0),
@@ -35,23 +34,23 @@ const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
   
     if (stickyElement) {
       const { left, top, height, width } = stickyElement.rect
-  
+    
       // center position of the stickyElement
       const center = { x: left + width / 2, y: top + height / 2 }
-  
+    
       // distance between the mouse pointer and the center of the custom cursor
       const distance = { x: clientX - center.x, y: clientY - center.y }
-  
+    
       // rotate
       rotate(distance)
-  
+    
       // stretch based on the distance
       const absDistance = Math.max(Math.abs(distance.x), Math.abs(distance.y))
       const newScaleX = transform(absDistance, [0, height / 2], [1, 1.3])
       const newScaleY = transform(absDistance, [0, width / 2], [1, 0.8])
       scale.x.set(newScaleX)
       scale.y.set(newScaleY)
-  
+    
       // move mouse to center of stickyElement + slightly move it towards the mouse pointer
       mouse.x.set((center.x - cursorSize / 2) + (distance.x * 0.1))
       mouse.y.set((center.y - cursorSize / 2) + (distance.y * 0.1))
@@ -62,32 +61,10 @@ const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
     }
   }
 
-  const manageMouseOver = () => setIsHovered(true)
-
-  const manageMouseLeave = () => {
-    setIsHovered(false)
-    // @ts-ignore
-    animate(cursor.current, { scaleX: 1, scaleY: 1 }, {duration: 0.1}, { type: 'spring' })
-  }
-
-  useEffect(() => {
-    if (stickyElement) {
-      manageMouseOver()
-      setIsHovered(true)
-    } else {
-      manageMouseLeave()
-      setIsHovered(false)
-      // @ts-ignore
-      animate(cursor.current, { scaleX: 1, scaleY: 1 }, {duration: 0.1}, { type: 'spring' })
-    }
-  }, [stickyElement])
-
   useEffect(() => {
     window.addEventListener('mousemove', manageMouseMove)
-    return () => {
-      window.removeEventListener('mousemove', manageMouseMove)
-    }
-  }, [])
+    return () => window.removeEventListener('mousemove', manageMouseMove)
+  }, [stickyElement])
 
   const template = ({rotate, scaleX, scaleY}: TransformProps) => `rotate(${rotate}) scaleX(${scaleX}) scaleY(${scaleY})` 
 

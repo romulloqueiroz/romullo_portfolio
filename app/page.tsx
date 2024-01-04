@@ -39,7 +39,7 @@ const Page = () => {
       }}
     >
       <LinkMenu />
-      <Home />
+      {/* <Home /> */}
       {/* <About /> */}
       {/* <Projects /> */}
       {/* <Contact /> */}
