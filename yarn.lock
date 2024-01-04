@@ -93,6 +93,26 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.0.4.tgz#e74892f1a9ccf41d3bf5979ad6d3d77c07b9cba1"
   integrity sha512-yEh2+R8qDlDCjxVpzOTEpBLQTEFAcP2A8fUFLaWNap9GitYKkKv1//y2S6XY6zsR4rCOPRpU7plYDR+az2n30A==
 
+"@preact/signals-core@^1.4.0", "@preact/signals-core@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@preact/signals-core/-/signals-core-1.5.1.tgz#77d375fcd03fa01ac560cd2e9b038fe10a80fb23"
+  integrity sha512-dE6f+WCX5ZUDwXzUIWNMhhglmuLpqJhuy3X3xHrhZYI0Hm2LyQwOu0l9mdPiWrVNsE+Q7txOnJPgtIqHCYoBVA==
+
+"@preact/signals-react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@preact/signals-react/-/signals-react-2.0.0.tgz#f8f69f1fdac224620aafd233a931431c6eb7d383"
+  integrity sha512-tMVi2SXFXlojaiPNWa8dlYaidR/XvEgMSp+iymKJgMssBM/QVtUQrodKZek1BJju+dkVHiyeuQHmkuLOI9oyNw==
+  dependencies:
+    "@preact/signals-core" "^1.5.1"
+    use-sync-external-store "^1.2.0"
+
+"@preact/signals@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@preact/signals/-/signals-1.2.2.tgz#78df53b2d7e6cdda0bb32843f12eb0418a0d82b0"
+  integrity sha512-ColCqdo4cRP18bAuIR4Oik5rDpiyFtPIJIygaYPMEAwTnl4buWkBOflGBSzhYyPyJfKpkwlekrvK+1pzQ2ldWw==
+  dependencies:
+    "@preact/signals-core" "^1.4.0"
+
 "@react-spring/animated@~9.6.1":
   version "9.6.1"
   resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.6.1.tgz#ccc626d847cbe346f5f8815d0928183c647eb425"
@@ -433,6 +453,11 @@ graceful-fs@^4.1.2, graceful-fs@^4.2.11:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
+hamt_plus@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hamt_plus/-/hamt_plus-1.0.2.tgz#e21c252968c7e33b20f6a1b094cd85787a265601"
+  integrity sha512-t2JXKaehnMb9paaYA7J0BX8QQAY8lwfQ9Gjf4pg/mk4krt+cmwmU652HOoWonf+7+EQV97ARPMhhVgU1ra2GhA==
+
 ieee754@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
@@ -555,6 +580,11 @@ potpack@^1.0.1:
   resolved "https://registry.yarnpkg.com/potpack/-/potpack-1.0.2.tgz#23b99e64eb74f5741ffe7656b5b5c4ddce8dfc14"
   integrity sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==
 
+preact@^10.19.3:
+  version "10.19.3"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.19.3.tgz#7a7107ed2598a60676c943709ea3efb8aaafa899"
+  integrity sha512-nHHTeFVBTHRGxJXKkKu5hT8C/YWBkPso4/Gad6xuj5dbptt9iF9NZr9pHbPhBrnT2klheu7mHTxTZ/LjwJiEiQ==
+
 prop-types@^15.6.0:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
@@ -615,6 +645,13 @@ react@^18:
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
+
+recoil@^0.7.7:
+  version "0.7.7"
+  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.7.7.tgz#c5f2c843224384c9c09e4a62c060fb4c1454dc8e"
+  integrity sha512-8Og5KPQW9LwC577Vc7Ug2P0vQshkv1y3zG3tSSkWMqkWSwHmE+by06L8JtnGocjW6gcCvfwB3YtrJG6/tWivNQ==
+  dependencies:
+    hamt_plus "1.0.2"
 
 regenerator-runtime@^0.14.0:
   version "0.14.1"
@@ -770,6 +807,11 @@ undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
+
+use-sync-external-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 utility-types@^3.10.0:
   version "3.10.0"

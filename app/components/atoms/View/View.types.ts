@@ -102,6 +102,11 @@ export interface ViewType {
   // events
   onMouseEnter?: (event: React.MouseEvent<HTMLElement>) => void
   onMouseLeave?: (event: React.MouseEvent<HTMLElement>) => void
+  onMouseOver?: (event: React.MouseEvent<HTMLElement>) => void
+  onMouseOut?: (event: React.MouseEvent<HTMLElement>) => void
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  onPointerEnter?: (event: React.PointerEvent<HTMLElement>) => void
+  onPointerLeave?: (event: React.PointerEvent<HTMLElement>) => void
   
   style: CSSProperties
   as?: 'div' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'header' | 'footer'

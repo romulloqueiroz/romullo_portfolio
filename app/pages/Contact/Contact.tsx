@@ -1,5 +1,7 @@
 import { View } from '@atoms'
 import { BilingualText, MaskedText } from '@molecules'
+import { cursorColorState } from '@state'
+import { useRecoilState } from 'recoil'
 
 const backgroundUrl = 'https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg'
 
@@ -24,40 +26,44 @@ const ContactCard = () => (
   />
 )
 
-const Contact = () => (
-  <View 
-    w='100vw'
-    h='100vh'
-    as='section'
-    cross='center'
-    style={{
-      background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
-    }}
-  >
-    <View mv={140} />
-
-    <BilingualText
-      txtBack={japTxt}
-      txtFront={engTxt}
-      maxWidth='447px'
-    />
-
-    <View
-      absolute
-      y='10vh'
-      w='100%'
+const Contact = () => {
+  const [_, setCursorColor] = useRecoilState(cursorColorState)
+  return (
+    <View 
+      w='100vw'
+      h='100vh'
+      as='section'
       cross='center'
+      style={{
+        background: `linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(${backgroundUrl})`,
+      }}
+      onMouseEnter={() => setCursorColor('yellow')}
     >
-      <MaskedText 
-        type='h2' 
-        txtHidden={txtHidden}
-        txtVisible={txtVisible}
-        color='yellow'
+      <View mv={140} />
+  
+      <BilingualText
+        txtBack={japTxt}
+        txtFront={engTxt}
+        maxWidth='447px'
       />
+  
+      <View
+        absolute
+        y='10vh'
+        w='100%'
+        cross='center'
+      >
+        <MaskedText 
+          type='h2' 
+          txtHidden={txtHidden}
+          txtVisible={txtVisible}
+          color='yellow'
+        />
+      </View>
+  
+      <ContactCard />
     </View>
-
-    <ContactCard />
-  </View>
-)
+  )
+}
 
 export { Contact }

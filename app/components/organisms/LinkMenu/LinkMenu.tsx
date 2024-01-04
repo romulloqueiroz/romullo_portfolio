@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { View, Cursor } from '@atoms'
 import { StickyButton } from '@molecules'
+import { cursorColorState } from '@state'
+import { useRecoilState } from 'recoil'
 
 export const LinkMenu = () => {
+  const [cursorColor] = useRecoilState(cursorColorState)
   const [activeButton, setActiveButton] = useState<{ id: string, rect: DOMRect } | null>(null)
 
   const handleMouseEnter = (e: React.MouseEvent) => {
@@ -13,7 +16,7 @@ export const LinkMenu = () => {
 
   return (
     <>
-      <Cursor stickyElement={activeButton} />
+      <Cursor stickyElement={activeButton} color={cursorColor} />
       <View
         as='nav'
         fixed

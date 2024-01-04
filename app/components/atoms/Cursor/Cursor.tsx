@@ -3,8 +3,9 @@ import { useEffect, useState, useRef } from 'react'
 import { useMotionValue, useSpring, transform, animate } from 'framer-motion'
 import { StyledCursor } from './Cursor.styles'
 import { CursorProps, TransformProps } from './Cursor.types'
+import { colors } from '@styles'
 
-const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
+const Cursor: React.FC<CursorProps> = ({stickyElement, color}) => {
   const cursor = useRef(null)
   const cursorSize = stickyElement ? 60 : 15
 
@@ -80,6 +81,7 @@ const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
         top: smoothMouse.y,
         scaleX: scale.x,
         scaleY: scale.y,
+        backgroundColor: colors[color]
       }} 
       animate={{
         width: cursorSize,

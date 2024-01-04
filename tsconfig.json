@@ -31,6 +31,7 @@
       "@utils": ["app/utils/index"],
       "@hooks": ["app/hooks/index"],
       "@3D": ["app/3D/index"],
+      "@state": ["app/state/index"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/atoms/Floating/Model.js", "app/components/atoms/Floating/Testing.js", "app/components/atoms/Cursor/Cursor.tsx"],
