@@ -1,24 +1,20 @@
-import { useState, useRef, createRef, RefObject } from 'react'
+import { useState } from 'react'
 import { View, Cursor } from '@atoms'
 import { StickyButton } from '@molecules'
 
 export const LinkMenu = () => {
-  const initialRef: RefObject<HTMLDivElement> = createRef()
-  const [activeElement, setActiveElement] = useState<RefObject<HTMLDivElement>>(initialRef)
-  const refs = useRef<{ [key: string]: RefObject<HTMLDivElement> }>({
-    github: createRef(),
-    linkedin: createRef(),
-    medium: createRef(),
-  })
+  const [activeButton, setActiveButton] = useState<{ id: string, rect: DOMRect } | null>(null)
 
-  const handleMouseEnter = (key: string) => setActiveElement(refs.current[key])
-  const handleMouseLeave = () => setActiveElement(initialRef)
+  const handleMouseEnter = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement
+    const rect = target.getBoundingClientRect()
+    console.log(rect)
+    setActiveButton({ id: target.id, rect })
+  }
 
   return (
     <>
-      <Cursor stickyElement={refs.current.github} />
-      <Cursor stickyElement={refs.current.linkedin} />
-      <Cursor stickyElement={refs.current.medium} />
+      <Cursor stickyElement={activeButton} />
       <View
         as='nav'
         fixed
@@ -31,24 +27,21 @@ export const LinkMenu = () => {
         z={100}
       >
         <StickyButton
-          ref={refs.current.github}
           name='github'
-          onMouseEnter={() => handleMouseEnter('github')}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={e => handleMouseEnter(e)}
+          onMouseLeave={() => setActiveButton(null)}
           url='https://github.com/romulloqueiroz'
         />
         <StickyButton
-          ref={refs.current.linkedin}
           name='linkedin'
-          onMouseEnter={() => handleMouseEnter('linkedin')}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={e => handleMouseEnter(e)}
+          onMouseLeave={() => setActiveButton(null)}
           url='https://www.linkedin.com/in/romullo-bernardo/'
         />
         <StickyButton
-          ref={refs.current.medium}
           name='medium'
-          onMouseEnter={() => handleMouseEnter('medium')}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={e => handleMouseEnter(e)}
+          onMouseLeave={() => setActiveButton(null)}
           url='https://medium.com/@romulloqueiroz'
         />
       </View>

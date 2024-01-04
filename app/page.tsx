@@ -31,12 +31,18 @@ const Page = () => {
 
 
   return (
-    <View>
+    <View
+      h='100vh'
+      w='100vw'
+      style={{
+        border: '2px solid orangered',
+      }}
+    >
       <LinkMenu />
       <Home />
-      <About />
-      <Projects />
-      <Contact />
+      {/* <About /> */}
+      {/* <Projects /> */}
+      {/* <Contact /> */}
     </View>
   )
 }

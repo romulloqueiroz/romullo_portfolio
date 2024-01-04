@@ -1,7 +1,7 @@
 import { RefObject } from 'react'
 
 export interface CursorProps {
-  stickyElement: RefObject<HTMLDivElement>
+  stickyElement: { id: string, rect: DOMRect } | null
 }
 
 export interface TransformProps {
