@@ -55,7 +55,11 @@ const Cursor: React.FC<CursorProps> = ({stickyElement}) => {
       mouse.x.set((center.x - cursorSize / 2) + (distance.x * 0.1))
       mouse.y.set((center.y - cursorSize / 2) + (distance.y * 0.1))
     } else {
-      // move custom cursor to center of stickyElement
+      // Reset the scale values when the cursor is not hovering over the stickyElement
+      scale.x.set(1)
+      scale.y.set(1)
+
+      // Move the cursor to the mouse position
       mouse.x.set(clientX - cursorSize / 2)
       mouse.y.set(clientY - cursorSize / 2)
     }
