@@ -55,6 +55,9 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
   z,
   style,
   as,
+  // events
+  onMouseEnter,
+  onMouseLeave,
 }, ref) => (
   <StyledView
     $ph={ph}
@@ -107,6 +110,9 @@ const View = forwardRef<HTMLDivElement, Partial<ViewType>>(({
     style={style}
     as={as}
     ref={ref}
+    // events
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
     {children}
   </StyledView>

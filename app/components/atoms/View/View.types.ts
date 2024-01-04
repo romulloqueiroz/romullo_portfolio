@@ -99,6 +99,10 @@ export interface ViewType {
   z: CSSProperties['zIndex']
   $z: CSSProperties['zIndex']
 
+  // events
+  onMouseEnter?: (event: React.MouseEvent<HTMLElement>) => void
+  onMouseLeave?: (event: React.MouseEvent<HTMLElement>) => void
+  
   style: CSSProperties
   as?: 'div' | 'main' | 'section' | 'article' | 'aside' | 'nav' | 'header' | 'footer'
 
