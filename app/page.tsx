@@ -32,13 +32,11 @@ const Page = () => {
 
   return (
     <RecoilRoot>
-      <View>
-        <LinkMenu />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-      </View>
+      <LinkMenu />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
     </RecoilRoot>
   )
 }
