@@ -17,7 +17,7 @@ export const Home = () => {
       onMouseEnter={() => setCursorColor('blue')}
     >
       <Home3D />
-      <View
+      {/* <View
         absolute
         y='0vh'
         w='100%'
@@ -29,7 +29,7 @@ export const Home = () => {
           txtVisible='HELLO, I’M ROMULLO'
           color='blue'
         />
-      </View>
+      </View> */}
     </View>
   )
 }

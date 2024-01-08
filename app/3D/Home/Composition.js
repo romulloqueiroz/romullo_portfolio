@@ -1,10 +1,8 @@
 import React from 'react'
-import { useGLTF, Float } from '@react-three/drei'
-import { useTransform } from 'framer-motion'
-import { motion } from 'framer-motion-3d'
+import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/composition.glb");
+  const { nodes, materials } = useGLTF('/composition.glb');
   return (
       <group {...props} dispose={null}>
         <group
@@ -16,13 +14,13 @@ export function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.bitcoin_1.geometry}
-            material={materials["black.004"]}
+            material={materials['black.004']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.bitcoin_2.geometry}
-            material={materials["SVGMat.217"]}
+            material={materials['SVGMat.217']}
           />
         </group>
         <group
@@ -34,26 +32,26 @@ export function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.blender.geometry}
-            material={materials["logo.009"]}
+            material={materials['logo.009']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.blender_1.geometry}
-            material={materials["back.009"]}
+            material={materials['back.009']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.blender_2.geometry}
-            material={materials["logo_1.003"]}
+            material={materials['logo_1.003']}
           />
         </group>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.ETH.geometry}
-          material={materials["Scene_-_Root"]}
+          material={materials['Scene_-_Root']}
           position={[0.185, 0.097, -0.041]}
           rotation={[-0.318, -0.673, -0.426]}
           scale={0.078}
@@ -67,31 +65,31 @@ export function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.figma.geometry}
-            material={materials["back.008"]}
+            material={materials['back.008']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.figma_1.geometry}
-            material={materials["logo.008"]}
+            material={materials['logo.008']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.figma_2.geometry}
-            material={materials["logo_1.002"]}
+            material={materials['logo_1.002']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.figma_3.geometry}
-            material={materials["logo_1_0.001"]}
+            material={materials['logo_1_0.001']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.figma_4.geometry}
-            material={materials["logo_2.001"]}
+            material={materials['logo_2.001']}
           />
         </group>
         <group
@@ -103,50 +101,13 @@ export function Model(props) {
             castShadow
             receiveShadow
             geometry={nodes.js.geometry}
-            material={materials["back.007"]}
+            material={materials['back.007']}
           />
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.js_1.geometry}
-            material={materials["logo.007"]}
-          />
-        </group>
-        <group
-          position={[-0.394, 0.158, 0.458]}
-          rotation={[0.967, -0.888, 0.485]}
-          scale={0.019}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.react.geometry}
-            material={materials["logo.005"]}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.react_1.geometry}
-            material={materials["back.005"]}
-          />
-        </group>
-        
-        <group
-          position={[0.135, 0.124, 0.573]}
-          rotation={[0.955, -0.105, -0.265]}
-          scale={0.015}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.ts.geometry}
-            material={materials["back.006"]}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.ts_1.geometry}
-            material={materials["logo.006"]}
+            material={materials['logo.007']}
           />
         </group>
 
@@ -154,7 +115,7 @@ export function Model(props) {
           castShadow
           receiveShadow
           geometry={nodes.Cube.geometry}
-          material={materials["Material.002"]}
+          material={materials['Material.002']}
           position={[0.175, 0.107, 0.357]}
           rotation={[-0.53, 0.431, 0.942]}
           scale={-0.058}
@@ -172,4 +133,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload("/composition.glb")
+useGLTF.preload('/composition.glb')

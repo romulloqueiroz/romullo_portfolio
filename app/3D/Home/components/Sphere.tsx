@@ -1,10 +1,10 @@
-'use client';
-import { Outlines } from '@react-three/drei';
+import { Outlines } from '@react-three/drei'
 
 interface SphereProps {
-  position: [number, number, number];
-  scale?: number;
+  position: [number, number, number]
+  scale?: number
 }
+
 export const Sphere: React.FC<SphereProps> = ({ scale, position }) => (
   <mesh
     castShadow
@@ -20,4 +20,4 @@ export const Sphere: React.FC<SphereProps> = ({ scale, position }) => (
       color='white' 
     />
   </mesh>
-);
+)
