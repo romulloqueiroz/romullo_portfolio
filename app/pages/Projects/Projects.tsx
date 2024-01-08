@@ -1,5 +1,4 @@
-import { colors } from '@styles'
-import { View, Text } from '@atoms'
+import { View } from '@atoms'
 import { BilingualText, MaskedText } from '@molecules'
 import { cursorColorState } from '@state'
 import { useRecoilState } from 'recoil'
@@ -18,10 +17,10 @@ const Projects = () => {
       h='100vh'
       as='section'
       cross='center'
-      style={{ 
-        backgroundColor: colors.background,
-      }}
       onMouseEnter={() => setCursorColor('green')}
+      style={{
+        border: '1px solid green'
+      }}
     >
       <View mv={140} />
       <BilingualText

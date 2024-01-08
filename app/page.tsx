@@ -34,9 +34,9 @@ const Page = () => {
     <RecoilRoot>
       <Home />
       <LinkMenu />
-      {/* 
       <About />
       <Projects />
+      {/* 
       <Contact /> */}
     </RecoilRoot>
   )
