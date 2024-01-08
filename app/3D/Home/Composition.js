@@ -92,24 +92,7 @@ export function Model(props) {
             material={materials['logo_2.001']}
           />
         </group>
-        <group
-          position={[-0.162, 0.111, 0.673]}
-          rotation={[0.836, 0.208, 0.374]}
-          scale={0.013}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.js.geometry}
-            material={materials['back.007']}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.js_1.geometry}
-            material={materials['logo.007']}
-          />
-        </group>
+
 
         <mesh
           castShadow

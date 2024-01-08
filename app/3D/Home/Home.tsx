@@ -7,6 +7,7 @@ import {
   ReactModel,
   Sphere,
   TS,
+  JS,
 } from './components'
 import { Model } from './Composition'
 
@@ -36,6 +37,11 @@ export const Home3D = () => (
       position={[1, 0.28, 3.4]} 
       scale={0.04} 
       rotation={[1.1, 0, 0]}
+    />
+    <JS 
+      position={[-0.162, 0.111, 3.6]}
+      rotation={[0.836, 0, 0.2]}
+      scale={0.013}
     />
     <Ground />
   </Canvas>
