@@ -22,7 +22,7 @@ export const Home3D = () => (
       enableZoom={false} 
       enablePan={false} 
     />
-    <Box scale={0.8} position={[-3, 0.7, 0]} />
+    <Box scale={0.8} position={[-3.8, 0.7, 0]} />
     <Sphere scale={0.2} position={[2.4, 0.2, 2.8]} />
     <Ground />
   </Canvas>

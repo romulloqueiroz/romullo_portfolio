@@ -19,7 +19,7 @@ export const Home = () => {
       <Home3D />
       <View
         absolute
-        y='4vh'
+        y='1vh'
         w='100%'
         cross='center'
       >

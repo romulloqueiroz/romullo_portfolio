@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Lenis from '@studio-freight/lenis'
 import { Home, About, Projects, Contact } from '@pages'
 // import { View } from '@atoms'
-// import { LinkMenu } from '@organisms'
+import { LinkMenu } from '@organisms'
 import { RecoilRoot } from 'recoil'
 
 const Page = () => {
@@ -33,7 +33,8 @@ const Page = () => {
   return (
     <RecoilRoot>
       <Home />
-      {/* <LinkMenu />
+      <LinkMenu />
+      {/* 
       <About />
       <Projects />
       <Contact /> */}
