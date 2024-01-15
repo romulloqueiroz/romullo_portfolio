@@ -14,6 +14,8 @@ export const Hidden: React.FC<HiddenProps> = ({ color, type, txtHidden, x, y }) 
       animate={{
         WebkitMaskPosition: `${xPos - (size / 2)}px ${yPos - (size / 2)}px`,
         WebkitMaskSize: `${size}px`,
+        maskPosition: `${xPos - (size / 2)}px ${yPos - (size / 2)}px`,
+        maskSize: `${size}px`,
       }}
       transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
       color={color}
