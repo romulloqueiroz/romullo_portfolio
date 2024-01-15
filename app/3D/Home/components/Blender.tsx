@@ -25,7 +25,9 @@ export const Blender: React.FC<BlenderProps> = ({ position, rotation, scale }) =
         receiveShadow
         geometry={(nodes.blender_1 as THREE.Mesh).geometry}
         material={materials['back.009']}
-      />
+        >
+        <Outlines color='white' />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
