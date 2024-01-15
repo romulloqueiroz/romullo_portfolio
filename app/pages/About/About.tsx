@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil'
 
 const engTxt = "I'm a software engineer based in Tokyo, specializing in building (and occasionally designing) exceptional websites, applications, and everything in between."
 
-const japTxt = '私は東京を拠点とするソフトウェアエンジニアで、優れたウェブサイト、アプリケーション、そしてその間のすべての構築（そして時折デザイン）を専門としている。'
+const japTxt = '私は東京を拠点とするソフトウェアエンジニアで、優れたウェブサイト、アプリケーション、その間のすべての構築（そして時折デザイン）を専門としている。'
 
 const txtHidden = '私について'
 const txtVisible = 'ABOUT ME'
