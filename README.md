@@ -22,7 +22,7 @@
 <h3>Instructions</h3>
 
 <p>
-  To run the project, just install de dependencies and type 'yarn dev', just like any project in NextJs.
+  To run the project, just install the dependencies and type 'yarn dev', just like any project in NextJs.
 </p>
 
 <p>Please feel free to take a look at the code, fork it, steal it, whatever.<br/></p>
