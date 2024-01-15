@@ -1,15 +1,17 @@
+import { Bitcoin } from './Bitcoin'
 import { Box } from './Box'
 import { Ground } from './Ground'
+import { JS } from './JS'
 import { ReactModel } from './ReactModel'
 import { Sphere } from './Sphere'
 import { TS } from './TS'
-import { JS } from './JS'
 
 export {
+  Bitcoin,
   Box,
   Ground,
+  JS,
   ReactModel,
   Sphere,
   TS,
-  JS,
 }

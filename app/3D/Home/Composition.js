@@ -6,24 +6,6 @@ export function Model(props) {
   return (
       <group {...props} dispose={null}>
         <group
-          position={[-0.223, 0.114, -0.206]}
-          rotation={[-0.441, 0.751, 0.605]}
-          scale={0.07}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.bitcoin_1.geometry}
-            material={materials['black.004']}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.bitcoin_2.geometry}
-            material={materials['SVGMat.217']}
-          />
-        </group>
-        <group
           position={[0.055, 0.061, 0.213]}
           rotation={[0.873, -0.349, 0.387]}
           scale={0.004}

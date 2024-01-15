@@ -2,6 +2,7 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { 
+  Bitcoin,
   Box,
   Ground,
   ReactModel,
@@ -18,6 +19,11 @@ export const Home3D = () => (
     <OrbitControls 
       enableZoom={false} 
       enablePan={false} 
+    />
+    <Bitcoin 
+      scale={0.14}
+      rotation={[-0.441, 0.751, 0.605]}
+      position={[2, 0.6, 2.4]}
     />
     <Box 
       scale={0.8} 
