@@ -10,6 +10,7 @@
   <li>React Three Fiber</li>
   <li>Framer-Motion</li>
   <li>Amazing original components 😜</li>
+  <li>Amazing stolen components 😱</li>
   <li>More to come...</li>
 </ul>
 <hr/>
