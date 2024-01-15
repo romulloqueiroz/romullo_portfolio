@@ -1,34 +1,12 @@
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
+
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/composition.glb');
+  const { nodes, materials } = useGLTF('/composition.glb')
   return (
       <group {...props} dispose={null}>
-        <group
-          position={[0.055, 0.061, 0.213]}
-          rotation={[0.873, -0.349, 0.387]}
-          scale={0.004}
-        >
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.blender.geometry}
-            material={materials['logo.009']}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.blender_1.geometry}
-            material={materials['back.009']}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.blender_2.geometry}
-            material={materials['logo_1.003']}
-          />
-        </group>
+
         <mesh
           castShadow
           receiveShadow
