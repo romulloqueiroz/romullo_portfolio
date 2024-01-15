@@ -1,6 +1,7 @@
 # My personal portfolio. WIP! Not done yet. But it's getting pretty cool. 
   ---
 ### Current deploy here: https://romullo-portfolio.vercel.app/
+#### Not responsive yet. I'm working on it 🙇
   ---
 <h3>Technologies used:</h3>
 <ul>
