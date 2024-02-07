@@ -1,6 +1,7 @@
 import { Bitcoin } from './Bitcoin'
 import { Blender } from './Blender'
 import { Box } from './Box'
+import { Cylinder } from './Cylinder'
 import { ETH } from './ETH'
 import { Figma } from './Figma'
 import { JS } from './JS'
@@ -12,6 +13,7 @@ export {
   Bitcoin,
   Blender,
   Box,
+  Cylinder,
   ETH,
   Figma,
   JS,

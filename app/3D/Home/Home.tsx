@@ -10,9 +10,9 @@ import {
   TS,
   JS,
 } from './components'
-import { Model } from './Composition'
 import { ETH } from './components/ETH'
 import { Figma } from './components/Figma'
+import { Cylinder } from './components/Cylinder'
 
 export const Home3D = () => (
   <Canvas camera={{ position: [0.6, 1.4, 5], fov: 75 }} >
@@ -24,6 +24,11 @@ export const Home3D = () => (
       minPolarAngle={0} 
       maxPolarAngle={Math.PI / 2.1}
     /> */}
+    <Cylinder 
+      position={[1.6, -0.2, 3.4]}
+      rotation={[0, 0.42, 1.6]}
+      scale={[0.024, 0.18, 0.02]}
+    />
     <Figma 
       position={[-0.144, 0.062, 2.7]}
       rotation={[0.745, -0.402, 0.346]}
@@ -44,11 +49,18 @@ export const Home3D = () => (
       scale={0.6} 
       position={[-1, 0.4, 1]} 
     />
+    <Box 
+      scale={-0.058} 
+      position={[0.24, 0, 3.6]} 
+    />
+    <Box 
+      scale={-0.1} 
+      position={[0.175, 0.107, 0.357]} 
+    />
     <Sphere 
       scale={0.2} 
       position={[2, 0.2, 2.8]} 
     />
-    <Model />
     <ETH 
       scale={0.2}
       position={[1, 0.097, 2]}
