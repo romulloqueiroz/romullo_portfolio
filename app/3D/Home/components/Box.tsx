@@ -11,8 +11,8 @@ export const Box: React.FC<BoxProps> = ({ position, scale }) => {
   const ref = useRef<THREE.Mesh>(null!)
   useFrame((_, delta) => {
     if (ref.current) {
-      ref.current.rotation.x += delta
-      ref.current.rotation.y += delta
+      ref.current.rotation.x += delta*0.1
+      ref.current.rotation.y += delta*0.1
     }
   })
   return (
@@ -25,7 +25,7 @@ export const Box: React.FC<BoxProps> = ({ position, scale }) => {
     >
       <boxGeometry />
       <meshStandardMaterial color='orange' />
-      <Outlines color='white' />
+      <Outlines color='#1C1C1C' />
     </mesh>
   )
 }

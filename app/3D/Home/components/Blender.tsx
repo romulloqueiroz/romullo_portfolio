@@ -26,7 +26,7 @@ export const Blender: React.FC<BlenderProps> = ({ position, rotation, scale }) =
         geometry={(nodes.blender_1 as THREE.Mesh).geometry}
         material={materials['back.009']}
         >
-        <Outlines color='white' />
+          <Outlines color='#1C1C1C' />
       </mesh>
       <mesh
         castShadow

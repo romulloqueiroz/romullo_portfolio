@@ -23,7 +23,7 @@ export const TS: React.FC<TSProps> = ({ position, rotation, scale }) => {
         <Outlines
           screenspace
           thickness={4}
-          color='white' 
+          color='#1C1C1C' 
         />
       </mesh>
       <mesh

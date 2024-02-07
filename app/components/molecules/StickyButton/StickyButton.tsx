@@ -17,7 +17,7 @@ const StickyButton = forwardRef<HTMLDivElement, StickyButtonProps>(({
     onMouseLeave={onMouseLeave}
   >
     <Magnetic>
-      <Icon name={name} color='white' />
+      <Icon name={name} color='black' />
       <StyledBounds ref={ref} />
     </Magnetic>
   </a>

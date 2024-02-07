@@ -1,7 +1,7 @@
 export type ColorType = typeof colors
 export const colors = {
   // B&W
-  black: '#111',
+  black: '#1C1C1C',
   white:'#FFF',
 
   gray1: '#333',

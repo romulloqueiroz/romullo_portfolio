@@ -31,7 +31,7 @@ export const Bitcoin: React.FC<BitcoinProps> = ({ position, rotation, scale }) =
           geometry={(nodes.bitcoin_1 as THREE.Mesh).geometry}
           material={materials['black.004']}
         >
-          <Outlines color='white' />
+          <Outlines color='#1C1C1C' />
         </mesh>
         <mesh
           castShadow
