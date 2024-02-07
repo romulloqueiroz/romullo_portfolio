@@ -19,9 +19,9 @@ const About = () => {
       as='section'
       cross='center'
       onMouseEnter={() => setCursorColor('orange')}
-      style={{
-        border: '1px solid orange'
-      }}
+      // style={{
+      //   border: '1px solid orange'
+      // }}
     >
       <View mv={140} />
       <BilingualText
