@@ -15,7 +15,7 @@ export const Bitcoin: React.FC<BitcoinProps> = ({ position, rotation, scale }) =
   useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.x += delta*0.01
-      ref.current.rotation.y += delta
+      ref.current.rotation.y += delta*0.08
     }
   })
   return (

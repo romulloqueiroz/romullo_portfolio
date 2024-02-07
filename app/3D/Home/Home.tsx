@@ -5,29 +5,34 @@ import {
   Bitcoin,
   Blender,
   Box,
-  Ground,
   ReactModel,
   Sphere,
   TS,
   JS,
 } from './components'
-
 import { Model } from './Composition'
+import { ETH } from './components/ETH'
+import { Figma } from './components/Figma'
 
 export const Home3D = () => (
-  <Canvas camera={{ position: [0., 1.4, 5], fov: 75 }} >
+  <Canvas camera={{ position: [0.6, 1.4, 5], fov: 75 }} >
     <ambientLight intensity={0.4} />
     <pointLight position={[5, 5, 0]} intensity={100} />
-    <OrbitControls 
+    {/* <OrbitControls 
       enableZoom={false} 
       enablePan={false} 
       minPolarAngle={0} 
       maxPolarAngle={Math.PI / 2.1}
+    /> */}
+    <Figma 
+      position={[-0.144, 0.062, 2.7]}
+      rotation={[0.745, -0.402, 0.346]}
+      scale={0.028}
     />
     <Bitcoin 
       scale={0.14}
-      rotation={[-0.441, 0.751, 0.605]}
-      position={[2, 0.6, 2.4]}
+      rotation={[-0.441, 0, 0.05]}
+      position={[1.6, 0.6, 2.4]}
     />
 
     <Blender 
@@ -44,6 +49,11 @@ export const Home3D = () => (
       position={[2, 0.2, 2.8]} 
     />
     <Model />
+    <ETH 
+      scale={0.2}
+      position={[1, 0.097, 2]}
+      rotation={[0, 0, 0]}
+    />
     <ReactModel 
       position={[-1.4, 0, 3]} 
       scale={0.04} 

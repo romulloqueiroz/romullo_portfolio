@@ -1,7 +1,8 @@
 import { Bitcoin } from './Bitcoin'
 import { Blender } from './Blender'
 import { Box } from './Box'
-import { Ground } from './Ground'
+import { ETH } from './ETH'
+import { Figma } from './Figma'
 import { JS } from './JS'
 import { ReactModel } from './ReactModel'
 import { Sphere } from './Sphere'
@@ -11,7 +12,8 @@ export {
   Bitcoin,
   Blender,
   Box,
-  Ground,
+  ETH,
+  Figma,
   JS,
   ReactModel,
   Sphere,
